@@ -1,0 +1,137 @@
+%input macros (i.e. write your own macros file called MacroFile1.tex)
+\include{Macros/MacroFile1}
+
+ \documentclass[twoside,12pt]{Classes/CUEDthesisPSnPDF}
+
+
+\ifpdf
+    \pdfinfo { /Title  (CUED PhD and MPhil Thesis Classes)
+               /Creator (TeX)
+               /Producer (pdfTeX)
+               /Author (Lars Barquist lb14@sanger.ac.uk)
+               /CreationDate (D:20030101000000)  %format D:YYYYMMDDhhmmss
+               /ModDate (D:20030815213532)
+               /Subject (High-throughput Experimental and Computational Studies of Bacterial Evolution)
+               /Keywords (PhD, Thesis)}
+    \pdfcatalog { /PageMode (/UseOutlines)
+                  /OpenAction (fitbh)  }
+\fi
+
+
+\title{High-throughput Experimental and Computational Studies of Bacterial Evolution}
+
+\ifpdf
+  \author{Lars Barquist}
+  \collegeordept{Queens' College}
+  \university{University of Cambridge}
+% insert below the file name that contains the crest in-place of 'UnivShield'
+  \crest{\includegraphics[width=29mm]{UnivShield}}
+\else
+  \author{Lars Barquist}
+  \collegeordept{Wellcome Trust Sanger Institute}
+  \university{University of Cambridge}
+% insert below the file name that contains the crest in-place of 'UnivShield'
+  \crest{\includegraphics[bb = 0 0 0 0, width=30mm]{UnivShield}}
+\fi
+%
+% insert below the file name that contains the crest in-place of 'UnivShield'
+% \crest{\IncludeGraphicsW{UnivShield}{40mm}{14 14 73 81}}
+%
+%\renewcommand{\submittedtext}{change the default text here if needed}
+\degree{Doctor of Philosophy}
+\degreedate{XX August 2013}
+
+% turn of those nasty overfull and underfull hboxes
+\hbadness=10000
+\hfuzz=50pt
+\usepackage{rotating}
+% Put all the style files you want in the directory StyleFiles and usepackage like this:
+\usepackage{StyleFiles/watermark}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{url}
+\usepackage{textcomp}
+\usepackage{lscape}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{nomencl}
+%sort out the headers
+\usepackage{fancyhdr}
+
+\usepackage{flexisym}
+%nice formatting
+\usepackage{microtype}
+\fancyhf{}
+\fancyfoot{}
+
+%Switch to biblatex
+\usepackage{babel}% Recommended
+\usepackage{csquotes}
+\addbibresource{References/references.bib}
+
+\DefineBibliographyStrings{english}{%
+  in = {},
+}
+
+% Comment out the next line to get single spacing
+\onehalfspacing
+
+
+\begin{document}
+\maketitle
+
+%set the number of sectioning levels that get number and appear in the contents
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\thispagestyle{empty}
+\newpage
+
+\frontmatter % book mode only
+\pagenumbering{roman}
+%\include{Dedication/dedication}
+%\thispagestyle{empty}
+\cleardoublepage
+\thispagestyle{empty}
+\include{Declaration/declaration}
+\thispagestyle{empty}
+\cleardoublepage
+
+%\include{Acknowledgement/acknowledgement}
+%\include{Abstract/abstract}
+%\include{References/references}
+
+\tableofcontents
+\listoffigures
+\listoftables
+\makenomenclature
+\renewcommand{\nomname}{List of Symbols}
+\printnomenclature
+\addcontentsline{toc}{chapter}{List of symbols}
+
+\mainmatter % book mode only
+\fancyhead[LO,RE]{\slshape Chapter \nouppercase \leftmark}
+\fancyfoot[C]{\thepage}
+
+%\include{Introduction/introduction}
+\include{Chapter1/chapter1}
+\include{Chapter2/chapter2}
+%\include{Chapter3/chapter3}
+%\include{Conclusions/conclusions}
+
+
+
+\backmatter % book mode only
+\fancyhead[LO,RE]{\textit{Published Works}}
+
+\include{PublishedWork/published}
+\fancyhead[LO,RE]{\textit{Appendix}}
+
+\appendix
+%\include{Appendix1/appendix1}
+\fancyhead[LO,RE]{\textit{References}}
+
+\renewcommand{\bibname}{References} % changes default name Bibliography to Referencse
+\singlespace
+\printbibliography
+\end{document}
