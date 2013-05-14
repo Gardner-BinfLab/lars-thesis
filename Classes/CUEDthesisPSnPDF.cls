@@ -75,7 +75,7 @@
 \definecolor{darkblue}{cmyk}{0.94,0.63,0.04,0.07}
 \definecolor{darkred}{cmyk}{0.22,1.00,1.00,0.17}
 
-\usepackage[natbib=true, style=authoryear,maxnames=2,maxbibnames=20,mergedate=false, maxcitenames=2,hyperref=false,dashed=false,firstinits=true]{biblatex}
+\usepackage[natbib=true, style=authoryear,maxbibnames=20,mergedate=false,hyperref=false,dashed=false,firstinits=true]{biblatex}
 %\usepackage[style=authoryear, natbib=true]{biblatex}
 \ifpdf
 	\pdfpageattr{/Group <</S /Transparency /I true /CS /DeviceRGB>>} 
