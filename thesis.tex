@@ -105,13 +105,18 @@
 \listoffigures
 \listoftables
 \makenomenclature
-\renewcommand{\nomname}{List of Symbols}
-\printnomenclature
-\addcontentsline{toc}{chapter}{List of symbols}
+\renewcommand{\nomname}{List of Abbreviations}
+\printnomenclature[10em]
+\addcontentsline{toc}{chapter}{List of Abbreviations}
+\nomenclature{A, C, G, T, U}{Adenine, Cytosine, Guanine, Thymine, Uracil}
+
+
 
 \mainmatter % book mode only
 \fancyhead[LO,RE]{\slshape Chapter \nouppercase \leftmark}
 \fancyfoot[C]{\thepage}
+
+
 
 %\include{Introduction/introduction}
 \include{Chapter1/chapter1}
