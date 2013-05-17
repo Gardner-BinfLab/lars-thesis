@@ -63,7 +63,7 @@
     \ifthenelse{\equal{#1}{G}}{%
      \item[\textbf{Greek Symbols}]}{%             G - Greek
       \ifthenelse{\equal{#1}{R}}{%
-        \item[\textbf{Superscripts}]}{%              R - Superscripts
+        \item[\textbf{Amino Acids}]}{%              R - Amino Acids
           \ifthenelse{\equal{#1}{S}}{%
            \item[\textbf{Subscripts}]}{{%             S - Subscripts
 	    \ifthenelse{\equal{#1}{X}}{%
