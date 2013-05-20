@@ -53,6 +53,10 @@
 \renewcommand{\bibname}{References}
 % note that this doesn't do much if you later define another bibliography style 
 
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.8}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\floatpagefraction}{0.75}
 
 % Nomenclature
 \usepackage{nomencl}
