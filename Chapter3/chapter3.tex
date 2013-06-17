@@ -11,7 +11,7 @@
     \graphicspath{{Chapter3/Chapter3Figs/EPS/}{Chapter3/Chapter3Figs/}}
 \fi
 
-\textit{Section 3.2 describes a collaborative study with Gemma C. Langridge (Pathogen Genomics, Wellcome Trust Sanger Institute). Gemma performed all laboratory experiments described in this chapter.}
+\textit{Section 3.2 describes a collaborative study with Gemma C. Langridge (Pathogen Genomics, Wellcome Trust Sanger Institute). Gemma performed all laboratory experiments described in this chapter unless otherwise noted.}
 
 \section{Introduction}
 
@@ -42,13 +42,25 @@ Determining conditional gene fitness presents a somewhat different problem to th
 
 In many ways, the problem of investigating the statistical and biological significance of ratios of reads over insertion sites resembles established analyses developed for differential RNA-seq analysis. In the following sections I describe the application of these methods to the problem of determining conditional gene fitness.
 
-\section{Methods}
-\textit{Gemma C. Langridge performed all laboratory experiments described in this chapter. A more detailed description of the experimental methods is available in \textcite{Langridge2010}, including preliminary assessments of bacterial strain ability to grow in RPMI\nomenclature[Z]{RPMI}{Rosewell Park Memorial Institute (cell culture medium)}, invade THP-1 derived macrophage, and experiment optimization.}
+\section{Experimental methods}
+\textit{Gemma C. Langridge performed all laboratory experiments described in this chapter; brief descriptions are included here for completeness. Silvia Pinero prepared the THP-1 cells for infection. Sabine Eckert and Daniel Turner performed the nucleotide sequencing. A more detailed description of the experimental methods is available in \textcite{Langridge2010}, including preliminary assessments of bacterial strain ability to grow in RPMI\nomenclature[Z]{RPMI}{Rosewell Park Memorial Institute (cell culture medium)}, invade THP-1 derived macrophage, and experiment optimization.}
 
 \subsection{Strains and cell lines}
 These experiments were performed with \textit{S.} Typhi WT174 and  \textit{S.} Typhimurium SL3261 transposon mutant libraries, described in Chapter 3. Human monocytic cell line THP-1 was used for cell infections.
 
 \subsection{Preparation of THP-1 cells}
+
+THP-1 cells were grown up from frozen stocks in RPMI-1640 supplemented with 10\% heat-inactivated foetal bovine serum and 2 mM L-glutamine, and incubated without shaking in vented flasks (VWR, Lutterworth, UK) at 37$^\circ$C in the presence of 5\% CO$_2$. Culture volumes were split and given fresh media every 3-4 days until the desired cell density was achieved. Phorbol myristate acetate (PMA)\nomenclature[Z]{PMA}{Phorbol myristate acetate} was used to activate the THP-1 monocytes. Briefly, approximately 212 cells in 4 mL supplemented RPMI containing 0.125 ng/mL PMA were seeded into each well of a 6-well plate and incubated for six days at 37$^\circ$C in 5\% CO$_2$. On the day of infection, the PMA-containing media was removed, cells were washed with dPBS\nomenclature[Z]{PBS}{Phosphate-buffered saline} and fresh warmed, supplemented RPMI was added to maintain the cells while the bacterial inoculum was prepared.
+
+\subsection{Preparation of transposon libraries}
+
+Frozen stocks of the Typhi library were measured by OD600 to be at half the concentration of the Typhimurium library. To ensure the overnight cultures started at similar concentrations, a 1 in 5000 dilution of the Typhi library and a 1 in 10,000 dilution of the Typhimurium library was used to inoculate the growth medium. Cultures for each transposon library were grown with shaking in 100 mL of RPMI-1640 supplemented with 0.3 g/L L-glutamine and buffered with 10 mL 1 M MOPS at 37 oC for 16 hours. These cultures were sub-cultured at 1 in 20 into fresh RPMI supplemented and buffered as before, and grown for between 3 and 4 hours to mid-log phase (OD600 of 2.4).
+
+\subsection{Infection assay}
+
+Five 6-well plates were used for each run of the assay. In total, 29 wells were infected with the bacterial inoculum and one served as a blank control for eukaryotic cell contamination. At the start of the assay, media was removed from all wells except for the blank control, and a 3 mL bacterial inoculum was added to each experimental well. The plates were centrifuged for 5 minutes at 600 x g and incubated at 37$^\circ$C in 5\% CO$_2$ for 30 minutes. A 4-6 mL aliquot of the inoculum was processed for genomic DNA as the TraDIS control. After 30 minutes, media was removed from all wells, and fresh RPMI additionally supplemented with 100 $\mu$g/mL gentamicin was added. After 2 hours the wells were washed 3 times in plain dPBS. Following washing, 500 $\mu$L of 1\% Triton-X-100 was added to each well to lyse the eukaryotic cells, mixed well by pipetting, and incubated at 37$^\circ$C in 5\% CO$_2$ for 2 minutes. The cell suspensions from all experimental wells were pooled for bacterial DNA extraction. Genomic DNA was extracted using the Qiagen DNeasy Blood and Tissue kit, according to the manufacturer’s protocol for Gram negative bacteria. Sequencing was performed as described in section 2.2.4.
+
+\section{Analysis of conditional gene fitness using TraDIS}
 
 \subsection{Mapping insertion sites}
 
@@ -61,15 +73,6 @@ These experiments were performed with \textit{S.} Typhi WT174 and  \textit{S.} T
 \subsection{Identifying fitness effects}
 
 \subsection{Functional analysis of gene sets that affect fitness}
-
-\section{Application: \textit{Salmonella enterica} macrophage invasion}
-
-\subsection{Background: the {\it Salmonella} containing vacuole}
-
-\subsection{Experimental methods}
-
-\textit{All experiments were performed by Gemma Langridge. They are described here briefly for completeness; in-depth descriptions of the experiments are available in \parencite{Langridge2010}}
-
 
 \subsection{Results}
 
