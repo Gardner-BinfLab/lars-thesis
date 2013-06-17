@@ -43,7 +43,7 @@ Determining conditional gene fitness presents a somewhat different problem to th
 In many ways, the problem of investigating the statistical and biological significance of ratios of reads over insertion sites resembles established analyses developed for differential RNA-seq analysis. In the following sections I describe the application of these methods to the problem of determining conditional gene fitness.
 
 \section{Experimental methods}
-\textit{Gemma C. Langridge performed all laboratory experiments described in this chapter; brief descriptions are included here for completeness. Silvia Pinero prepared the THP-1 cells for infection. Sabine Eckert and Daniel Turner performed the nucleotide sequencing. A more detailed description of the experimental methods is available in \textcite{Langridge2010}, including preliminary assessments of bacterial strain ability to grow in RPMI\nomenclature[Z]{RPMI}{Rosewell Park Memorial Institute (cell culture medium)}, invade THP-1 derived macrophage, and experiment optimization.}
+\textit{Gemma C. Langridge performed all laboratory experiments described in this chapter, as well as read mapping; brief descriptions are included here for completeness. Silvia Pinero prepared the THP-1 cells for infection. Sabine Eckert and Daniel Turner performed the nucleotide sequencing. A more detailed description of the experimental methods is available in \textcite{Langridge2010}, including preliminary assessments of bacterial strain ability to grow in RPMI\nomenclature[Z]{RPMI}{Rosewell Park Memorial Institute (cell culture medium)}, invade THP-1 derived macrophage, and experiment optimization.}
 
 \subsection{Strains and cell lines}
 These experiments were performed with \textit{S.} Typhi WT174 and  \textit{S.} Typhimurium SL3261 transposon mutant libraries, described in Chapter 3. Human monocytic cell line THP-1 was used for cell infections.
@@ -74,7 +74,11 @@ Read mapping is a special case of one of the oldest problems in bioinformatics, 
 
 We can asses the quality of TraDIS experiments on multiple levels: the number of reads containing transposon tags and mapping to the genome, the number of insertion sites recovered, the rank-correlation of the number of reads recovered for each gene in replicated experiments, and clustering experiments using a dimensionality reduction technique such as principal component analysis (PCA)\nomenclature[Z]{PCA}{Principal component analysis}.
 
+
+
 \input{Chapter3/Chapter3Tables/readmap.tex}
+\input{Chapter3/Chapter3Tables/corr.tex}
+
 
 \subsection{Inter-library normalization}
 
