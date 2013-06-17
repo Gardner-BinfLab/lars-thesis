@@ -2,12 +2,129 @@
 %% http://bibdesk.sourceforge.net/
 
 
-%% Created for Lars Barquist at 2013-06-14 21:08:56 +0100 
+%% Created for Lars Barquist at 2013-06-17 14:16:58 +0100 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+
+@article{Langmead2009,
+	Author = {Langmead, Ben and Trapnell, Cole and Pop, Mihai and Salzberg, Steven L},
+	Date-Added = {2013-06-17 14:14:43 +0100},
+	Date-Modified = {2013-06-17 14:14:43 +0100},
+	Doi = {10.1186/gb-2009-10-3-r25},
+	Journal = {Genome Biol},
+	Journal-Full = {Genome biology},
+	Mesh = {Algorithms; Base Sequence; Genome, Human; Humans; Sequence Alignment},
+	Number = {3},
+	Pages = {R25},
+	Pmc = {PMC2690996},
+	Pmid = {19261174},
+	Pst = {ppublish},
+	Title = {Ultrafast and memory-efficient alignment of short DNA sequences to the human genome},
+	Volume = {10},
+	Year = {2009},
+	Abstract = {Bowtie is an ultrafast, memory-efficient alignment program for aligning short DNA sequence reads to large genomes. For the human genome, Burrows-Wheeler indexing allows Bowtie to align more than 25 million reads per CPU hour with a memory footprint of approximately 1.3 gigabytes. Bowtie extends previous Burrows-Wheeler techniques with a novel quality-aware backtracking algorithm that permits mismatches. Multiple processor cores can be used simultaneously to achieve even greater alignment speeds. Bowtie is open source (http://bowtie.cbcb.umd.edu).},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1186/gb-2009-10-3-r25}}
+
+@article{Li2010,
+	Author = {Li, Heng and Durbin, Richard},
+	Date-Added = {2013-06-17 14:14:10 +0100},
+	Date-Modified = {2013-06-17 14:14:10 +0100},
+	Doi = {10.1093/bioinformatics/btp698},
+	Journal = {Bioinformatics},
+	Journal-Full = {Bioinformatics (Oxford, England)},
+	Mesh = {Algorithms; Base Sequence; Genome, Human; Genomics; Humans; Sequence Alignment; Sequence Analysis, DNA},
+	Month = {Mar},
+	Number = {5},
+	Pages = {589-95},
+	Pmc = {PMC2828108},
+	Pmid = {20080505},
+	Pst = {ppublish},
+	Title = {Fast and accurate long-read alignment with Burrows-Wheeler transform},
+	Volume = {26},
+	Year = {2010},
+	Abstract = {MOTIVATION: Many programs for aligning short sequencing reads to a reference genome have been developed in the last 2 years. Most of them are very efficient for short reads but inefficient or not applicable for reads >200 bp because the algorithms are heavily and specifically tuned for short queries with low sequencing error rate. However, some sequencing platforms already produce longer reads and others are expected to become available soon. For longer reads, hashing-based software such as BLAT and SSAHA2 remain the only choices. Nonetheless, these methods are substantially slower than short-read aligners in terms of aligned bases per unit time.
+RESULTS: We designed and implemented a new algorithm, Burrows-Wheeler Aligner's Smith-Waterman Alignment (BWA-SW), to align long sequences up to 1 Mb against a large sequence database (e.g. the human genome) with a few gigabytes of memory. The algorithm is as accurate as SSAHA2, more accurate than BLAT, and is several to tens of times faster than both.
+AVAILABILITY: http://bio-bwa.sourceforge.net},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1093/bioinformatics/btp698}}
+
+@article{Burrows1994,
+	Author = {Burrows, Michael and Wheeler, David J},
+	Date-Added = {2013-06-17 14:13:21 +0100},
+	Date-Modified = {2013-06-17 14:13:32 +0100},
+	Publisher = {Citeseer},
+	Title = {A block-sorting lossless data compression algorithm},
+	Year = {1994}}
+
+@article{Lipman1985,
+	Author = {Lipman, D J and Pearson, W R},
+	Date-Added = {2013-06-17 13:55:32 +0100},
+	Date-Modified = {2013-06-17 13:55:32 +0100},
+	Journal = {Science},
+	Journal-Full = {Science (New York, N.Y.)},
+	Mesh = {Amino Acid Sequence; Angiotensinogen; Animals; Biological Evolution; Bunyaviridae; Cattle; Computers; Cyclic AMP; Cytochrome c Group; Humans; Information Systems; Microcomputers; Nucleoproteins; Probability; Protein Kinases; Protein Precursors; Proteins; Rats; Software; Viral Proteins},
+	Month = {Mar},
+	Number = {4693},
+	Pages = {1435-41},
+	Pmid = {2983426},
+	Pst = {ppublish},
+	Title = {Rapid and sensitive protein similarity searches},
+	Volume = {227},
+	Year = {1985},
+	Abstract = {An algorithm was developed which facilitates the search for similarities between newly determined amino acid sequences and sequences already available in databases. Because of the algorithm's efficiency on many microcomputers, sensitive protein database searches may now become a routine procedure for molecular biologists. The method efficiently identifies regions of similar sequence and then scores the aligned identical and differing residues in those regions by means of an amino acid replacability matrix. This matrix increases sensitivity by giving high scores to those amino acid replacements which occur frequently in evolution. The algorithm has been implemented in a computer program designed to search protein databases very rapidly. For example, comparison of a 200-amino-acid sequence to the 500,000 residues in the National Biomedical Research Foundation library would take less than 2 minutes on a minicomputer, and less than 10 minutes on a microcomputer (IBM PC).}}
+
+@article{Altschul1990,
+	Author = {Altschul, S F and Gish, W and Miller, W and Myers, E W and Lipman, D J},
+	Date-Added = {2013-06-17 13:45:05 +0100},
+	Date-Modified = {2013-06-17 13:45:05 +0100},
+	Doi = {10.1016/S0022-2836(05)80360-2},
+	Journal = {J Mol Biol},
+	Journal-Full = {Journal of molecular biology},
+	Mesh = {Algorithms; Amino Acid Sequence; Base Sequence; Databases, Factual; Mutation; Sensitivity and Specificity; Sequence Homology, Nucleic Acid; Software},
+	Month = {Oct},
+	Number = {3},
+	Pages = {403-10},
+	Pmid = {2231712},
+	Pst = {ppublish},
+	Title = {Basic local alignment search tool},
+	Volume = {215},
+	Year = {1990},
+	Abstract = {A new approach to rapid sequence comparison, basic local alignment search tool (BLAST), directly approximates alignments that optimize a measure of local similarity, the maximal segment pair (MSP) score. Recent mathematical results on the stochastic properties of MSP scores allow an analysis of the performance of this method as well as the statistical significance of alignments it generates. The basic algorithm is simple and robust; it can be implemented in a number of ways and applied in a variety of contexts including straightforward DNA and protein sequence database searches, motif searches, gene identification searches, and in the analysis of multiple regions of similarity in long DNA sequences. In addition to its flexibility and tractability to mathematical analysis, BLAST is an order of magnitude faster than existing sequence comparison tools of comparable sensitivity.},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1016/S0022-2836(05)80360-2}}
+
+@article{Needleman1970,
+	Author = {Needleman, S B and Wunsch, C D},
+	Date-Added = {2013-06-17 13:03:44 +0100},
+	Date-Modified = {2013-06-17 13:03:44 +0100},
+	Journal = {J Mol Biol},
+	Journal-Full = {Journal of molecular biology},
+	Mesh = {Amino Acid Sequence; Computers; Hemoglobins; Methods; Muramidase; Myoglobin; Probability; Ribonucleases},
+	Month = {Mar},
+	Number = {3},
+	Pages = {443-53},
+	Pmid = {5420325},
+	Pst = {ppublish},
+	Title = {A general method applicable to the search for similarities in the amino acid sequence of two proteins},
+	Volume = {48},
+	Year = {1970}}
+
+@article{Smith1981,
+	Author = {Smith, T F and Waterman, M S},
+	Date-Added = {2013-06-17 13:02:24 +0100},
+	Date-Modified = {2013-06-17 13:02:24 +0100},
+	Journal = {J Mol Biol},
+	Journal-Full = {Journal of molecular biology},
+	Mesh = {Base Sequence; Models, Chemical},
+	Month = {Mar},
+	Number = {1},
+	Pages = {195-7},
+	Pmid = {7265238},
+	Pst = {ppublish},
+	Title = {Identification of common molecular subsequences},
+	Volume = {147},
+	Year = {1981}}
 
 @article{Okamura2005,
 	Author = {Okamura, Masashi and Lillehoj, Hyun S and Raybourne, Richard B and Babu, Uma S and Heckert, Robert A and Tani, Hiroyuki and Sasai, Kazumi and Baba, Eiichiroh and Lillehoj, Erik P},

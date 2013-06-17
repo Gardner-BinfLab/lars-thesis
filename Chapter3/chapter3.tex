@@ -15,7 +15,7 @@
 
 \section{Introduction}
 
-In the previous chapter, I described the results of a study predicting and comparing the genes required for robust growth of two \textit{Salmonella} serovars in standard laboratory media. While this revealed interesting aspects of \textit{Salmonella} biology, linking these findings to \textit{Salmonella}'s infective niche in the human host is difficult. However, transposon-insertion sequencing can be used to interrogate infective conditions directly (reviewed previously in section 1.5): by comparing libraries passed through a condition of interest to control libraries, we can determine the genomic regions involved in survival in that condition. In this chapter, I describe a pipeline for the analysis of such experiments, illustrated with an experiment assaying genes required for \textit{S.} Typhi and Typhimurium invasion of (or uptake into) human macrophage.
+In the previous chapter, I described the results of a study predicting and comparing the genes required for robust growth of two \textit{Salmonella} serovars in standard laboratory media. While this revealed interesting aspects of \textit{Salmonella} biology, linking these findings to \textit{Salmonella}'s infective niche in the human host is difficult. However, transposon-insertion sequencing can be used to interrogate infective conditions directly (reviewed previously in section 1.5): by comparing libraries passed through a condition of interest to control libraries, we can determine the genomic regions involved in survival in that condition. In this chapter, I describe a pipeline for the analysis of such experiments, illustrated with an experiment assaying genes required for \textit{S.} Typhi and Typhimurium invasion of (or uptake into) human macrophage. These methods have been adopted by Pathogen Informatics at the Sanger, form the basis of the current Sanger pipelines for analysis of TraDIS experiments, and are being used in a variety of transposon-insertion sequencing studies.
 
 \subsection{\textit{Salmonella} interactions with macrophage}
 
@@ -54,7 +54,7 @@ THP-1 cells were grown up from frozen stocks in RPMI-1640 supplemented with 10\%
 
 \subsection{Preparation of transposon libraries}
 
-Frozen stocks of the Typhi library were measured by OD600 to be at half the concentration of the Typhimurium library. To ensure the overnight cultures started at similar concentrations, a 1 in 5000 dilution of the Typhi library and a 1 in 10,000 dilution of the Typhimurium library was used to inoculate the growth medium. Cultures for each transposon library were grown with shaking in 100 mL of RPMI-1640 supplemented with 0.3 g/L L-glutamine and buffered with 10 mL 1 M MOPS at 37 oC for 16 hours. These cultures were sub-cultured at 1 in 20 into fresh RPMI supplemented and buffered as before, and grown for between 3 and 4 hours to mid-log phase (OD600 of 2.4).
+Frozen stocks of the Typhi library were measured by OD600 to be at half the concentration of the Typhimurium library. To ensure the overnight cultures started at similar concentrations, a 1 in 5000 dilution of the Typhi library and a 1 in 10,000 dilution of the Typhimurium library was used to inoculate the growth medium. Cultures for each transposon library were grown with shaking in 100 mL of RPMI-1640 supplemented with 0.3 g/L L-glutamine and buffered with 10 mL 1 M MOPS at 37$^\circ$C for 16 hours. These cultures were sub-cultured at 1 in 20 into fresh RPMI supplemented and buffered as before, and grown for between 3 and 4 hours to mid-log phase (OD600 of 2.4).
 
 \subsection{Infection assay}
 
@@ -62,7 +62,13 @@ Five 6-well plates were used for each run of the assay. In total, 29 wells were 
 
 \section{Analysis of conditional gene fitness using TraDIS}
 
+\subsection{Experimental design}
+
+Our goal for this experiment was to determine the differences in gene requirements for human macrophage invasion in two \textit{Salmonella} serovars: Typhimurium, a host-generalist, and Typhi, host-restricted to humans as described in the previous chapter. To this end, infection assays of activated THP-1 monocytes were performed in triplicate with transposon libraries for each serovar. These were compared to libraries grown in cell culture medium (RPMI), to control for any incidental changes in library composition due to growth in this medium. 
+
 \subsection{Mapping insertion sites}
+
+Read mapping is a special case of one of the oldest problems in bioinformatics, aligning a short sequence of length $n$ to a much longer sequence, or database of sequences of length $m$. An optimal solution (with respect to a particular sequence similarity scoring scheme) for this problem using dynamic programming was first proposed by \textcite{Smith1981}, building on previous work by \textcite{Needleman1970}. Unfortunately, this method requires construction of a dynamic programming matrix of size $n \times m$, which quickly becomes impractical for large $m$ due to both time and memory constraints. Heuristic solutions to this problem have been developed, starting with the FASTA and BLAST\nomenclature[Z]{BLAST}{Basic local alignment search tool} algorithms \parencite{Lipman1985,Altschul1990}. The basic idea behind these heuristics is to rapidly search for identical matches using a hash of either the database or query sequence before performing a full Smith-Waterman style local alignment around this match. For the case of mapping reads to larger eukaryotic genomes, more powerful heuristics, such as the Burrows-Wheeler transform \parencite{Burrows1994, Langmead2009, Li2010}, may be required due to time and space constraints. However as I am working with relatively small bacterial genomes, I have used MAQ \parencite{Li2008} here, which is similar in spirit to FASTA or BLAST, but with additional refinements to deal with repetitive genomic regions and to assessing alignment quality.
 
 \subsection{Defining genomic features}
 
