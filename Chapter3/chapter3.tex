@@ -46,7 +46,7 @@ In many ways, the problem of investigating the statistical and biological signif
 \textit{Gemma C. Langridge performed all laboratory experiments described in this chapter, as well as read mapping; brief descriptions are included here for completeness. Silvia Pinero prepared the THP-1 cells for infection. Sabine Eckert and Daniel Turner performed the nucleotide sequencing. A more detailed description of the experimental methods is available in \textcite{Langridge2010}, including preliminary assessments of bacterial strain ability to grow in RPMI\nomenclature[Z]{RPMI}{Rosewell Park Memorial Institute (cell culture medium)}, invade THP-1 derived macrophage, and experiment optimization.}
 
 \subsection{Strains and cell lines}
-These experiments were performed with \textit{S.} Typhi WT174 and  \textit{S.} Typhimurium SL3261 transposon mutant libraries, described in Chapter 3. Human monocytic cell line THP-1 was used for cell infections.
+These experiments were performed with \textit{S.} Typhi WT174 and  \textit{S.} Typhimurium SL3261 transposon mutant libraries, described in chapter 3. Annotations and orthology predictions used are as in chapter 3. Human monocytic cell line THP-1 was used for cell infections. 
 
 \subsection{Preparation of THP-1 cells}
 
@@ -64,7 +64,7 @@ Five 6-well plates were used for each run of the assay. In total, 29 wells were 
 
 \subsection{Experimental design}
 
-The goal for this experiment was to determine the differences in gene requirements for human macrophage invasion in two \textit{Salmonella} serovars: Typhimurium, a host-generalist, and Typhi, host-restricted to humans as described in the previous chapter. To this end, infection assays of activated THP-1 monocytes were performed in triplicate with transposon libraries for each serovar at high multiplicities of infection in an attempt to avoid bottleneck effects. These were compared to libraries grown in cell culture medium (RPMI), to control for any incidental changes in library composition due to growth in this medium. 
+The goal for this experiment was to determine the differences in gene requirements for human macrophage invasion in two \textit{Salmonella} serovars: Typhimurium, a host-generalist, and Typhi, host-restricted to humans as described in the previous chapter. To this end, infection assays of activated THP-1 monocytes were performed in triplicate with transposon libraries for each serovar at high multiplicities of infection in an attempt to avoid bottleneck effects. These were compared to libraries grown in cell culture medium (RPMI), to control for any incidental changes in library composition due to growth in this medium.
 
 \subsection{Mapping insertion sites}
 
@@ -93,9 +93,15 @@ The other discrepancy is in the correlation between {\it S.} Typhimurium infecti
 \end{center}
 \end{figure}
 
-To further investigate the potential bottleneck effect in {\it S.} Typhimurium, I performed a principal component analysis on all samples (see figure \ref{fig:PCA}). Samples were centered and scaled to correct for the differences in read counts between experiments.
+To further investigate the potential bottleneck effect in {\it S.} Typhimurium, I performed a principal component analysis (PCA) on all samples. PCA is a mathematical technique for dimensional reduction which identifies linear vectors (components) in a high-dimensional dataset which capture maximal amounts of the variance between samples. This high dimensional data can then be visualized in a lower (e.g. 2 or 3) dimensional space by plotting samples against these components. Samples were centered and scaled to correct for the differences in read counts between experiments. Plots of all samples in this study on the first two principal components, accounting for 55\% and 18\% of the total variance respectively, are shown in figure \ref{fig:PCA}. With the exception of the third {\it S.} Typhimurium infection experiment, all samples collected under the same conditions cluster on this plot, as would be expected if these results are reporting the effects of differential selection. All infection samples lie to the left of their respective control samples on the first component, suggesting that the dominant signal in this data is due to the effects of selection during macrophage infection. The fact that two of the three {\it S.} Typhimurium infection experiments cluster together suggests that this signal is stronger than any stochastic bottleneck effect despite the lower correlations observed between these libraries, and that it should be possible to derive useful information about the conditions faced by {\it S.} Typhimurium during infection from these experiments. Unfortunately, the third {\it S.} Typhimurium infection replicate, which was performed separately as described earlier, does not cluster well with these. It is unclear why this is the case, and it may be due to differences in experimental set up or sequencing. I excluded this replicate from further analysis on this basis.
 
 \subsection{Inter-library normalization}
+
+Normalization is a critical part of any high-throughput sequencing experiment. As observed in the previous section, even the same experiment repeated on the same machine can lead to very different read counts. The naive approach to solving this problem is simply to scale each sequencing library by some factor so that the total read counts are equivalent. This may be adequate for analysis of technical replicates where gene expression levels are identical between all samples. \textcite{Robinson2010a} illustrate why this may not be the case for biological replicates, or especially for the comparison of sequencing libraries sampling populations under different conditions with a simple thought experiment:
+
+\begin{quote}
+Imagine we have a sequencing experiment comparing two RNA populations, A and B. In this hypothetical scenario, suppose every gene that is expressed in B is expressed in A with the same number of transcripts. However, assume that sample A also contains a set of genes equal in number and expression that are not expressed in B. Thus, sample A has twice as many total expressed genes as sample B, that is, its RNA production is twice the size of sample B. Suppose that each sample is then sequenced to the same depth. Without any additional adjustment, a gene expressed in both samples will have, on average, half the number of reads from sample A, since the reads are spread over twice as many genes. Therefore, the correct normalization would adjust sample A by a factor of 2. \parencite{Robinson2010a}
+\end{quote}
 
 \subsection{Identifying fitness effects}
 
