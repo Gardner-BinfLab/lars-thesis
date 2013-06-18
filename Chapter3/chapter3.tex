@@ -107,6 +107,8 @@ More generally, we can think of each gene in a sequencing library as representin
 
 \subsection{Identifying fitness effects}
 
+Once sequencing libraries have been normalized, the next step in determining fitness effects is the choice of a proper test statistic to determine significance. In the previous chapter, I used two test statistics. The first was to test for gene requirements within a particular library, and this was accomplished by fitting gamma distributions to the two modes observed in the distributions of insertion indexes, then setting a threshold based on a log-odds ratio (see figure \ref{fig:gamma}). The second was to additional test for significant differences in read depth between the {\it S.} Typhimurium and {\it S.} Typhi libraries. In this case the pairwise differences in reads between genomic features in the two libraries were roughly normally distributed, and I was able to set a significance threshold based on a fitted normal curve.
+
 \subsection{Functional analysis of gene sets that affect fitness}
 
 \subsection{Results}
