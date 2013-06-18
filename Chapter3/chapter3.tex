@@ -74,10 +74,13 @@ Read mapping is a special case of one of the oldest problems in bioinformatics, 
 
 We can asses the quality of TraDIS experiments on multiple levels: the number of reads containing transposon tags and mapping to the genome, the number of insertion sites recovered, the rank-correlation of the number of reads recovered for each gene in replicated experiments, and clustering experiments using a dimensionality reduction technique such as principal component analysis (PCA)\nomenclature[Z]{PCA}{Principal component analysis}.
 
-
-
 \input{Chapter3/Chapter3Tables/readmap.tex}
-\input{Chapter3/Chapter3Tables/corr.tex}
+
+Summary statistics of the sequencing runs for this experiment are presented in table \ref{tab:readmap}. Total read yield varied from $\sim$6.4 to $\sim$18.1 million reads, with lower yields generally observed for the infection libraries. Similarly, the percentage of reads containing transposon sequence is significantly lower in the {\it S.} Typhi infection samples. However, despite these issues, over two million reads over insertion sites were recovered in every sample which provides adequate coverage for this assay. Interestingly, the number of unique insertion sites recovered from the {\it S.} Typhimurium infection assays was approximately half that observed in the {\it S.} Typhi assay in every replicate, despite having an apparently more complex inoculum. This is suggestive of a stronger bottleneck effect for {\it S.} Typhimurium than {\it S.} Typhi during infection of human macrophage, as might be expected given the latter's host adaptation.
+
+Rank
+
+\input{Chapter3/Chapter3Tables/pear.tex}
 
 \begin{figure}[htp]
 \begin{center}
