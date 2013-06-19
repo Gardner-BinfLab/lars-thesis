@@ -97,7 +97,7 @@ The number of insertion sites for any gene is dependent upon its length, so the 
 
 I calculated a p-value for the observed number of insertion sites per gene using a Poisson approximation with rate $R = \frac{N}{G}$ where $N$ is the number of unique insert sites (549,086) and $G$ is the number of bases in the genome (4,878,012). The p-value for at least $X$ consecutive bases without an insert site is $e^{(-RX)}$, giving a 5\% cut-off at 27 bp and a 1\% cut-off at 41 bp.
 
-For every gene $g$ with $n_{g,A}$ reads observed in {\it S.} Typhi and $n_{g,B}$ reads observed in {\it S.} Typhimurium, I calculated the log2 fold change ratio $S_{g,A,B} = log2 (\frac{n_{g,A}+100}{n_{g,B}+100})$. The correction of 100 reads smoothes out the high scores for genes with very low numbers of observed reads. I fitted a normal distribution to the mode +/- 2 sample standard deviations of the distribution of $S_{A,B}$, and calculated p-values for each gene according to the fit. I considered genes with a p-value of 0.05 or less under the fitted normal distribution to be uniquely required by one serovar.
+For every gene $g$ with $n_{g,A}$ reads observed in {\it S.} Typhi and $n_{g,B}$ reads observed in {\it S.} Typhimurium, I calculated the $log_2$ fold change ratio $S_{g,A,B} = log_2 (\frac{n_{g,A}+100}{n_{g,B}+100})$. The correction of 100 reads smoothes out the high scores for genes with very low numbers of observed reads. I fitted a normal distribution to the mode +/- 2 sample standard deviations of the distribution of $S_{A,B}$, and calculated p-values for each gene according to the fit. I considered genes with a p-value of 0.05 or less under the fitted normal distribution to be uniquely required by one serovar.
 
 \section{Results and Discussion}
 
