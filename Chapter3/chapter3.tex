@@ -122,17 +122,36 @@ I have used edgeR \parencite{Robinson2010} for significance testing here, a R pa
 
 Returning to the macrophage infection assays, I first eliminated genomic features from consideration which did not have at least 20 counts per million normalized reads (CPM\nomenclature[Z]{CPM}{Counts per million (reads)}) in at least three assay or control replicates. This cut-off is arbitrary, but serves the purpose of removing features from consideration which do not have adequate read coverage to deliver biologically significant results in at least one condition. This provides two advantages: firstly, it increases statistical power by reducing the number of simultaneous hypothesis tests that need to be corrected for, and secondly, it eliminates features which may have statistically significant logFCs but may not have large enough mutant populations to determine if these effects are biologically relevant. This reduces the number of genomic features tested from 3882 (including all orthologous coding sequences and non-coding RNAs) to 3596.
 
-I then set up three statistical analyses within the generalized linear model (GLM\nomenclature[Z]{GLM}{Generalized linear model}) framework provided by edgeR, which allows for multi-factorial analyses. The first tests whether the logFC between {\it S.} Typhimurium infection and control is different from the logFC between {\it S.} Typhi infection and control. This allows me to discriminate between mutant populations which behave similarly during macrophage invasion in the two serovars (no or small difference in logFCs), from those which behave differently (large difference in logFCs). Of course, this does not allow me to discriminate between mutant populations which are expanding, those that are shrinking, or those which are static in both serovars during invasion - this test only tells if their behavior is similar. Similarly, using this test I can not discriminate between features with differences in logFCs that are the result of mutant expansion in one serovar, or contraction in another. For this reason I performed two additional analyses, testing the significance of logFCs between infection and control in each serovar independently.
+I then set up three statistical analyses within the generalized linear model (GLM\nomenclature[Z]{GLM}{Generalized linear model}) framework provided by edgeR, which allows for multi-factorial analyses. The first tests whether the logFC between {\it S.} Typhimurium infection and control is different from the logFC between {\it S.} Typhi infection and control. This allows me to discriminate between mutant populations which behave similarly during macrophage invasion in the two serovars (no or small difference in logFCs), from those which behave differently (large difference in logFCs). Of course, this does not allow me to discriminate between mutant populations which are expanding, those that are shrinking, or those which are static in both serovars during invasion - this test only tells if their behavior is similar. Similarly, using this test I can not discriminate between features with differences in logFCs that are the result of mutant expansion in one serovar, or contraction in another. For this reason I performed two additional analyses, testing the significance of logFCs between infection and control in each serovar independently. All p-values have been corrected for multiple testing using the method of \textcite{Benjamini1995}, controlling for a false discovery rate (FDR\nomenclature[Z]{FDR}{False discovery rate}) of 10\%.
 
 \begin{figure}[htp]
 \begin{center}
 \includegraphics[width=14cm]{STMvTY}
-\caption[Smear plot of differences in logFC over macrophage infection between {\it S.} Typhimurium and {\it S.} Typhi]{\textbf{Smear plot of differences in logFC over macrophage infection between {\it S.} Typhimurium and {\it S.} Typhi.} Each point in this plot represents a tested genomic feature. LogFC is reported on the Y-axis, logCPM on the X-axis; statistically significant features are in red. The blue lines represent logFCs of $|2|$, translating to a four-fold difference in logFC in mutant prevalences between the two serovars.
+\caption[Smear plot of differences in logFC over macrophage infection between {\it S.} Typhimurium and {\it S.} Typhi]{\textbf{Smear plot of differences in logFC over macrophage infection between {\it S.} Typhimurium and {\it S.} Typhi.} Each point in this plot represents a tested genomic feature. LogFC is reported on the Y-axis, logCPM on the X-axis; statistically significant features at a FDR of 0.1 are in red. The blue lines represent logFCs of $|2|$, translating to a four-fold difference in logFC in mutant prevalences between the two serovars.
 } 
 \label{fig:svt}
 \end{center}
 \end{figure}
 
+\begin{figure}[htp]
+\begin{center}
+\includegraphics[width=14cm]{STM}
+\caption[Smear plot of logFC in mutant prevalences over macrophage infection in {\it S.} Typhimurium]{\textbf{Smear plot of logFC in mutant prevalences over macrophage infection in {\it S.} Typhimurium.} Each point in this plot represents a tested genomic feature. LogFC is reported on the Y-axis, logCPM on the X-axis; statistically significant features at a FDR of 0.1 are in red. The blue lines represent logFCs of $|2|$, translating to a four-fold difference in logFC in mutant prevalences between the two serovars.
+} 
+\label{fig:stm}
+\end{center}
+\end{figure}
+
+\begin{figure}[htp]
+\begin{center}
+\includegraphics[width=14cm]{TY}
+\caption[Smear plot of logFC in mutant prevalences over macrophage infection in {\it S.} Typhi]{\textbf{Smear plot of logFC in mutant prevalences over macrophage infection in {\it S.} Typhi.} Each point in this plot represents a tested genomic feature. LogFC is reported on the Y-axis, logCPM on the X-axis; statistically significant features at a FDR of 0.1 are in red. The blue lines represent logFCs of $|2|$, translating to a four-fold difference in logFC in mutant prevalences between the two serovars.
+} 
+\label{fig:TY}
+\end{center}
+\end{figure}
+
+The results of the comparison between {\it S.} Typhimurium and {\it S.} Typhi changes in logFC over macrophage infection are shown in figure \ref{fig:svt}. The majority of genes seem to 
 
 \subsection{Functional analysis of gene sets that affect fitness}
 
