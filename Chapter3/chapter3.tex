@@ -50,7 +50,7 @@ These experiments were performed with \textit{S.} Typhi WT174 and  \textit{S.} T
 
 \subsection{Preparation of THP-1 cells}
 
-THP-1 cells were grown up from frozen stocks in RPMI-1640 supplemented with 10\% heat-inactivated foetal bovine serum and 2 mM L-glutamine, and incubated without shaking in vented flasks (VWR, Lutterworth, UK) at 37$^\circ$C in the presence of 5\% CO$_2$. Culture volumes were split and given fresh media every 3-4 days until the desired volume and cell density was achieved. Phorbol myristate acetate (PMA)\nomenclature[Z]{PMA}{Phorbol myristate acetate} was used to activate the THP-1 monocytes. Briefly, approximately 212 cells in 4 mL supplemented RPMI containing 0.125 ng/mL PMA were seeded into each well of a 6-well plate and incubated for six days at 37$^\circ$C in 5\% CO$_2$. On the day of infection, the PMA-containing media was removed, cells were washed with dPBS\nomenclature[Z]{PBS}{Phosphate-buffered saline} and fresh warmed, supplemented RPMI was added to maintain the cells while the bacterial inoculum was prepared.
+THP-1 cells were grown up from frozen stocks in RPMI-1640 supplemented with 10\% heat-inactivated foetal bovine serum and 2 mM L-glutamine, and incubated without shaking in vented flasks (VWR, Lutterworth, UK) at 37$^\circ$C in the presence of 5\% CO$_2$. Culture volumes were split and given fresh media every 3-4 days until the desired volume and cell density was achieved. Phorbol myristate acetate (PMA)\nomenclature[Z]{PMA}{Phorbol myristate acetate} was used to differentiate the THP-1 monocytes. Briefly, approximately 212 cells in 4 mL supplemented RPMI containing 0.125 ng/mL PMA were seeded into each well of a 6-well plate and incubated for six days at 37$^\circ$C in 5\% CO$_2$. On the day of infection, the PMA-containing media was removed, cells were washed with dPBS\nomenclature[Z]{PBS}{Phosphate-buffered saline} and fresh warmed, supplemented RPMI was added to maintain the cells while the bacterial inoculum was prepared.
 
 \subsection{Preparation of transposon libraries}
 
@@ -136,7 +136,7 @@ I then set up three statistical analyses within the generalized linear model (GL
 \begin{figure}[htp]
 \begin{center}
 \includegraphics[width=14cm]{STM}
-\caption[Smear plot of logFC in mutant prevalences over macrophage infection in {\it S.} Typhimurium]{\textbf{Smear plot of logFC in mutant prevalences over macrophage infection in {\it S.} Typhimurium.} Each point in this plot represents a tested genomic feature. LogFC is reported on the Y-axis, logCPM on the X-axis; statistically significant features at a FDR of 0.1 are in red. The blue lines represent logFCs of $|2|$, translating to a four-fold difference in logFC in mutant prevalences between the two serovars.
+\caption[Smear plot of logFC in mutant prevalences over macrophage infection in {\it S.} Typhimurium]{\textbf{Smear plot of logFC in mutant prevalences over macrophage infection in {\it S.} Typhimurium.} Each point in this plot represents a tested genomic feature. LogFC is reported on the Y-axis, logCPM on the X-axis; statistically significant features at a FDR of 0.1 are in red. The blue lines represent logFCs of $|2|$, translating to a four-fold change in mutant prevalences between infection and control.
 } 
 \label{fig:stm}
 \end{center}
@@ -145,13 +145,13 @@ I then set up three statistical analyses within the generalized linear model (GL
 \begin{figure}[htp]
 \begin{center}
 \includegraphics[width=14cm]{TY}
-\caption[Smear plot of logFC in mutant prevalences over macrophage infection in {\it S.} Typhi]{\textbf{Smear plot of logFC in mutant prevalences over macrophage infection in {\it S.} Typhi.} Each point in this plot represents a tested genomic feature. LogFC is reported on the Y-axis, logCPM on the X-axis; statistically significant features at a FDR of 0.1 are in red. The blue lines represent logFCs of $|2|$, translating to a four-fold difference in logFC in mutant prevalences between the two serovars.
+\caption[Smear plot of logFC in mutant prevalences over macrophage infection in {\it S.} Typhi]{\textbf{Smear plot of logFC in mutant prevalences over macrophage infection in {\it S.} Typhi.} Each point in this plot represents a tested genomic feature. LogFC is reported on the Y-axis, logCPM on the X-axis; statistically significant features at a FDR of 0.1 are in red. The blue lines represent logFCs of $|2|$, translating to a four-fold change in mutant prevalences between infection and control.
 } 
 \label{fig:TY}
 \end{center}
 \end{figure}
 
-The results of the comparison between {\it S.} Typhimurium and {\it S.} Typhi changes in logFC over macrophage infection are shown in figure \ref{fig:svt}. The majority of genes seem to 
+The results of the comparison between {\it S.} Typhimurium and {\it S.} Typhi changes in logFC over macrophage infection are shown in figure \ref{fig:svt}, and the individual changes in mutant prevalences for each serovar are shown in figures \ref{fig:stm} and \ref{fig:TY}. On first viewing these figures, there is a striking in the behavior of the {\it S.} Typhimurium and {\it S.} Typhi mutant libraries: while {\it S.} Typhimurium displays a wide spread of changes in mutant prevalence, 938 of them statistically significant, indicating a strong selective pressure operating on the library, the composition of the {\it S.} Typhi library appears nearly unchanged after passaging, with only 28 features showing a statistically significant change in mutant prevalence. In fact it appears that nearly all of the statistically significant differences in logFC between the two libraries over macrophage infection are due to changes in mutant prevalences in the {\it S.} Typhimurium library. This seems to indicate, on a gross level, that {\it S.} Typhi is somehow avoiding the brunt of the gauntlet imposed on {\it S.} Typhimurium in the first two hours of macrophage infection. This may partially be due to the presence of the Vi capsule on {\it S.} Typhi, which has previously been shown to enhance survival in THP-1 derived macrophage \parencite{Hirose1997} though the creation of a `stealth' phenotype which reduces the expression of inflammatory factors, such as TNF-$\alpha$\nomenclature{TNF-$\alpha$}{Tumor necrosis factor $\alpha$}, by the macrophage.
 
 \subsection{Functional analysis of gene sets that affect fitness}
 
