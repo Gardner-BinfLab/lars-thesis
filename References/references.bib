@@ -2,12 +2,121 @@
 %% http://bibdesk.sourceforge.net/
 
 
-%% Created for Lars Barquist at 2013-07-05 13:41:54 +0100 
+%% Created for Lars Barquist at 2013-07-05 18:17:56 +0100 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+
+@article{Eddy2011,
+	Author = {Eddy, Sean R},
+	Date-Added = {2013-07-05 18:16:30 +0100},
+	Date-Modified = {2013-07-05 18:16:30 +0100},
+	Doi = {10.1371/journal.pcbi.1002195},
+	Journal = {PLoS Comput Biol},
+	Journal-Full = {PLoS computational biology},
+	Mesh = {Algorithms; Computational Biology; Databases, Protein; Information Storage and Retrieval; Markov Chains; Sequence Alignment; Software},
+	Month = {Oct},
+	Number = {10},
+	Pages = {e1002195},
+	Pmc = {PMC3197634},
+	Pmid = {22039361},
+	Pst = {ppublish},
+	Title = {Accelerated Profile HMM Searches},
+	Volume = {7},
+	Year = {2011},
+	Abstract = {Profile hidden Markov models (profile HMMs) and probabilistic inference methods have made important contributions to the theory of sequence database homology search. However, practical use of profile HMM methods has been hindered by the computational expense of existing software implementations. Here I describe an acceleration heuristic for profile HMMs, the "multiple segment Viterbi" (MSV) algorithm. The MSV algorithm computes an optimal sum of multiple ungapped local alignment segments using a striped vector-parallel approach previously described for fast Smith/Waterman alignment. MSV scores follow the same statistical distribution as gapped optimal local alignment scores, allowing rapid evaluation of significance of an MSV score and thus facilitating its use as a heuristic filter. I also describe a 20-fold acceleration of the standard profile HMM Forward/Backward algorithms using a method I call "sparse rescaling". These methods are assembled in a pipeline in which high-scoring MSV hits are passed on for reanalysis with the full HMM Forward/Backward algorithm. This accelerated pipeline is implemented in the freely available HMMER3 software package. Performance benchmarks show that the use of the heuristic MSV filter sacrifices negligible sensitivity compared to unaccelerated profile HMM searches. HMMER3 is substantially more sensitive and 100- to 1000-fold faster than HMMER2. HMMER3 is now about as fast as BLAST for protein searches.},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1371/journal.pcbi.1002195}}
+
+@article{Chomsky1959,
+	Author = {Chomsky, Noam},
+	Date-Added = {2013-07-05 18:07:16 +0100},
+	Date-Modified = {2013-07-05 18:07:25 +0100},
+	Journal = {Information and control},
+	Number = {2},
+	Pages = {137--167},
+	Publisher = {Elsevier},
+	Title = {On certain formal properties of grammars},
+	Volume = {2},
+	Year = {1959}}
+
+@article{Chomsky1956,
+	Author = {Chomsky, Noam},
+	Date-Added = {2013-07-05 18:02:08 +0100},
+	Date-Modified = {2013-07-05 18:02:18 +0100},
+	Journal = {Information Theory, IRE Transactions on},
+	Number = {3},
+	Pages = {113--124},
+	Publisher = {IEEE},
+	Title = {Three models for the description of language},
+	Volume = {2},
+	Year = {1956}}
+
+@article{Nawrocki2007,
+	Author = {Nawrocki, Eric P and Eddy, Sean R},
+	Date-Added = {2013-07-05 17:29:12 +0100},
+	Date-Modified = {2013-07-05 17:29:12 +0100},
+	Doi = {10.1371/journal.pcbi.0030056},
+	Journal = {PLoS Comput Biol},
+	Journal-Full = {PLoS computational biology},
+	Mesh = {Base Sequence; Database Management Systems; Databases, Genetic; Information Storage and Retrieval; Molecular Sequence Data; RNA; Sequence Alignment; Sequence Analysis, RNA; Sequence Homology, Nucleic Acid},
+	Month = {Mar},
+	Number = {3},
+	Pages = {e56},
+	Pmc = {PMC1847999},
+	Pmid = {17397253},
+	Pst = {ppublish},
+	Title = {Query-dependent banding (QDB) for faster RNA similarity searches},
+	Volume = {3},
+	Year = {2007},
+	Abstract = {When searching sequence databases for RNAs, it is desirable to score both primary sequence and RNA secondary structure similarity. Covariance models (CMs) are probabilistic models well-suited for RNA similarity search applications. However, the computational complexity of CM dynamic programming alignment algorithms has limited their practical application. Here we describe an acceleration method called query-dependent banding (QDB), which uses the probabilistic query CM to precalculate regions of the dynamic programming lattice that have negligible probability, independently of the target database. We have implemented QDB in the freely available Infernal software package. QDB reduces the average case time complexity of CM alignment from LN(2.4) to LN(1.3) for a query RNA of N residues and a target database of L residues, resulting in a 4-fold speedup for typical RNA queries. Combined with other improvements to Infernal, including informative mixture Dirichlet priors on model parameters, benchmarks also show increased sensitivity and specificity resulting from improved parameterization.},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1371/journal.pcbi.0030056}}
+
+@article{Eddy1998,
+	Author = {Eddy, S R},
+	Date-Added = {2013-07-05 17:02:50 +0100},
+	Date-Modified = {2013-07-05 17:02:50 +0100},
+	Journal = {Bioinformatics},
+	Journal-Full = {Bioinformatics (Oxford, England)},
+	Mesh = {Humans; Markov Chains; Peptide Library; Sequence Alignment; Software},
+	Number = {9},
+	Pages = {755-63},
+	Pmid = {9918945},
+	Pst = {ppublish},
+	Title = {Profile hidden Markov models},
+	Volume = {14},
+	Year = {1998},
+	Abstract = {The recent literature on profile hidden Markov model (profile HMM) methods and software is reviewed. Profile HMMs turn a multiple sequence alignment into a position-specific scoring system suitable for searching databases for remotely homologous sequences. Profile HMM analyses complement standard pairwise comparison methods for large-scale sequence analysis. Several software implementations and two large libraries of profile HMMs of common protein domains are available. HMM methods performed comparably to threading methods in the CASP2 structure prediction exercise.}}
+
+@inproceedings{Sakakibara1994,
+	Author = {Sakakibara, Yasubumi and Brown, Michael and Underwood, Rebecca C and Mian, I Saira and Haussler, David},
+	Booktitle = {System Sciences, 1994. Proceedings of the Twenty-Seventh Hawaii International Conference on},
+	Date-Added = {2013-07-05 16:57:41 +0100},
+	Date-Modified = {2013-07-05 16:57:51 +0100},
+	Organization = {IEEE},
+	Pages = {284--293},
+	Title = {Stochastic context-free grammars for modeling RNA},
+	Volume = {5},
+	Year = {1994}}
+
+@article{Eddy1994,
+	Author = {Eddy, S R and Durbin, R},
+	Date-Added = {2013-07-05 16:55:43 +0100},
+	Date-Modified = {2013-07-05 16:55:43 +0100},
+	Journal = {Nucleic Acids Res},
+	Journal-Full = {Nucleic acids research},
+	Mesh = {Algorithms; Animals; Base Sequence; Caenorhabditis elegans; Consensus Sequence; Information Systems; Models, Genetic; Models, Statistical; Molecular Sequence Data; Nucleic Acid Conformation; RNA, Transfer; Sequence Analysis, RNA; Sequence Homology, Nucleic Acid},
+	Month = {Jun},
+	Number = {11},
+	Pages = {2079-88},
+	Pmc = {PMC308124},
+	Pmid = {8029015},
+	Pst = {ppublish},
+	Title = {RNA sequence analysis using covariance models},
+	Volume = {22},
+	Year = {1994},
+	Abstract = {We describe a general approach to several RNA sequence analysis problems using probabilistic models that flexibly describe the secondary structure and primary sequence consensus of an RNA sequence family. We call these models 'covariance models'. A covariance model of tRNA sequences is an extremely sensitive and discriminative tool for searching for additional tRNAs and tRNA-related sequences in sequence databases. A model can be built automatically from an existing sequence alignment. We also describe an algorithm for learning a model and hence a consensus secondary structure from initially unaligned example sequences and no prior structural information. Models trained on unaligned tRNA examples correctly predict tRNA secondary structure and produce high-quality multiple alignments. The approach may be applied to any family of small RNA sequences.}}
 
 @article{Zuker1981,
 	Author = {Zuker, M and Stiegler, P},
