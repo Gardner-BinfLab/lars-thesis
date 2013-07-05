@@ -87,7 +87,7 @@ cmsearch -T 14 -g --fil-no-qdb --fil-no-hmm
 
 \subsection{Definitions}
 
-For the purposes of benchmarking, the following measures were used \[Sensitivity = \frac{TP}{TP + FN} \] \[ PPV = \frac{TP}{TP + FP} \] \[ FPR = \frac{FP}{\text{Total length in kb}} \] \[ MCC = \frac{TP \times TN - FP \times FN}{\sqrt{(TP + FP)(TP + FN)(TN + FP)(TN + FN)}} \] where any prediction that covered a known RIT by at least one nucleotide was considered a true positive (TP), any prediction that did not overlap a known RIT was considered a false positive (FP), a missed RIT was considered a false positive (FP), and the number of unclassified, non-RIT sequence were considered true negatives (TN).
+For the purposes of benchmarking, the following measures were used \[Sensitivity = \frac{TP}{TP + FN} \] \[ PPV = \frac{TP}{TP + FP} \] \[ FPR = \frac{FP}{\text{Total length in kb}} \] \[ MCC = \frac{TP \times TN - FP \times FN}{\sqrt{(TP + FP)(TP + FN)(TN + FP)(TN + FN)}} \] where any prediction that covered a known RIT by at least one nucleotide was considered a true positive (TP), any prediction that did not overlap a known RIT was considered a false positive (FP), a missed RIT was considered a false negative (FN), and the number of unclassified, non-RIT sequence were considered true negatives (TN).
 
 \section{Results}
 \subsection{Alpha benchmark}
