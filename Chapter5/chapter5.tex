@@ -15,6 +15,21 @@
 
 \section{Methods}
 
+\subsection{Genome-wise motif discovery}
+1853 embl format files containing the genomic sequence and annotations for 1639 were obtained from the EMBL European Nucleotide Archive completed bacterial genomes pages, see supplementary information for organisms and accession numbers.
+
+Each embl file was screened independently for putative multi-copy termination motifs. For each embl file, I extracted sequences from -20 to +80 around annotated stop codons. Each extracted sequence was screened for a lower than expected predicted MFE using RNAfold in order to screen out locally GC-rich but unstructured sequences. Briefly, the sequence under consideration was shuffled 1000 times preserving dinucleotide frequencies, and a Gumbel distribution was fitted to the resulting empirical null MFE distribution using the R MASS package \parencite{Venables1994}. Sequences with a native MFE below the 95th percentile of the null distribution were discarded. The resulting set of sequences was then given as input to CMfinder \parencite{Yao2006}, which produces collections of locally-aligned structurally conserved motifs. I built a CM for each motif using Infernal 1.0.2 \parencite{Nawrocki2009}.  The resulting CMs were searched against the embl file the motif was discovered in, and were then screened on the following criteria for the collection of search hits with an E-value of less than 1: a copy number of between 100 and 3000, and a median distance of $<$10 to the nearest annotated stop codon. This resulted in a collection of 4359 putative termination motifs, each derived from a single embl file. 
+
+\subsection{Clustering covariance models}
+
+
+
+\subsection{Curating cluster motifs}
+
+\subsection{Genome annotation}
+
+\subsection{Analysis of expression data}
+
 \section{Results}
 
 \subsection{A pipeline for Kingdom-wide motif discovery}
