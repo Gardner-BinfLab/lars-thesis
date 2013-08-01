@@ -2,12 +2,74 @@
 %% http://bibdesk.sourceforge.net/
 
 
-%% Created for Lars Barquist at 2013-07-31 19:11:30 +0100 
+%% Created for Lars Barquist at 2013-08-01 12:11:12 +0100 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+
+@article{Hamada2009,
+	Author = {Hamada, Michiaki and Sato, Kengo and Kiryu, Hisanori and Mituyama, Toutai and Asai, Kiyoshi},
+	Date-Added = {2013-08-01 12:10:33 +0100},
+	Date-Modified = {2013-08-01 12:10:33 +0100},
+	Doi = {10.1093/bioinformatics/btp580},
+	Journal = {Bioinformatics},
+	Journal-Full = {Bioinformatics (Oxford, England)},
+	Mesh = {Base Sequence; Computational Biology; Databases, Genetic; RNA; RNA, Untranslated; Sequence Alignment; Sequence Analysis, RNA; Software},
+	Month = {Dec},
+	Number = {24},
+	Pages = {3236-43},
+	Pmid = {19808876},
+	Pst = {ppublish},
+	Title = {CentroidAlign: fast and accurate aligner for structured RNAs by maximizing expected sum-of-pairs score},
+	Volume = {25},
+	Year = {2009},
+	Abstract = {MOTIVATION: The importance of accurate and fast predictions of multiple alignments for RNA sequences has increased due to recent findings about functional non-coding RNAs. Recent studies suggest that maximizing the expected accuracy of predictions will be useful for many problems in bioinformatics.
+RESULTS: We designed a novel estimator for multiple alignments of structured RNAs, based on maximizing the expected accuracy of predictions. First, we define the maximum expected accuracy (MEA) estimator for pairwise alignment of RNA sequences. This maximizes the expected sum-of-pairs score (SPS) of a predicted alignment under a probability distribution of alignments given by marginalizing the Sankoff model. Then, by approximating the MEA estimator, we obtain an estimator whose time complexity is O(L(3)+c(2)dL(2)) where L is the length of input sequences and both c and d are constants independent of L. The proposed estimator can handle uncertainty of secondary structures and alignments that are obstacles in Bioinformatics because it considers all the secondary structures and all the pairwise alignments as input sequences. Moreover, we integrate the probabilistic consistency transformation (PCT) on alignments into the proposed estimator. Computational experiments using six benchmark datasets indicate that the proposed method achieved a favorable SPS and was the fastest of many state-of-the-art tools for multiple alignments of structured RNAs.
+AVAILABILITY: The software called CentroidAlign, which is an implementation of the algorithm in this article, is freely available on our website: http://www.ncrna.org/software/centroidalign/.
+CONTACT: hamada-michiaki@aist.go.jp
+SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics online.},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1093/bioinformatics/btp580}}
+
+@article{Katoh2008,
+	Author = {Katoh, Kazutaka and Toh, Hiroyuki},
+	Date-Added = {2013-08-01 12:06:47 +0100},
+	Date-Modified = {2013-08-01 12:06:47 +0100},
+	Doi = {10.1186/1471-2105-9-212},
+	Journal = {BMC Bioinformatics},
+	Journal-Full = {BMC bioinformatics},
+	Mesh = {Algorithms; Base Sequence; Molecular Sequence Data; RNA, Untranslated; Reproducibility of Results; Sensitivity and Specificity; Sequence Alignment; Sequence Analysis, RNA; Structure-Activity Relationship},
+	Pages = {212},
+	Pmc = {PMC2387179},
+	Pmid = {18439255},
+	Pst = {epublish},
+	Title = {Improved accuracy of multiple ncRNA alignment by incorporating structural information into a MAFFT-based framework},
+	Volume = {9},
+	Year = {2008},
+	Abstract = {BACKGROUND: Structural alignment of RNAs is becoming important, since the discovery of functional non-coding RNAs (ncRNAs). Recent studies, mainly based on various approximations of the Sankoff algorithm, have resulted in considerable improvement in the accuracy of pairwise structural alignment. In contrast, for the cases with more than two sequences, the practical merit of structural alignment remains unclear as compared to traditional sequence-based methods, although the importance of multiple structural alignment is widely recognized.
+RESULTS: We took a different approach from a straightforward extension of the Sankoff algorithm to the multiple alignments from the viewpoints of accuracy and time complexity. As a new option of the MAFFT alignment program, we developed a multiple RNA alignment framework, X-INS-i, which builds a multiple alignment with an iterative method incorporating structural information through two components: (1) pairwise structural alignments by an external pairwise alignment method such as SCARNA or LaRA and (2) a new objective function, Four-way Consistency, derived from the base-pairing probability of every sub-aligned group at every multiple alignment stage.
+CONCLUSION: The BRAliBASE benchmark showed that X-INS-i outperforms other methods currently available in the sum-of-pairs score (SPS) criterion. As a basis for predicting common secondary structure, the accuracy of the present method is comparable to or rather higher than those of the current leading methods such as RNA Sampler. The X-INS-i framework can be used for building a multiple RNA alignment from any combination of algorithms for pairwise RNA alignment and base-pairing probability. The source code is available at the webpage found in the Availability and requirements section.},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1186/1471-2105-9-212}}
+
+@article{Li2006,
+	Author = {Li, Weizhong and Godzik, Adam},
+	Date-Added = {2013-08-01 11:58:33 +0100},
+	Date-Modified = {2013-08-01 11:58:33 +0100},
+	Doi = {10.1093/bioinformatics/btl158},
+	Journal = {Bioinformatics},
+	Journal-Full = {Bioinformatics (Oxford, England)},
+	Mesh = {Algorithms; Animals; Cluster Analysis; Computational Biology; DNA; Databases, Nucleic Acid; Databases, Protein; Expressed Sequence Tags; Humans; Programming Languages; RNA; Sequence Analysis, DNA; Sequence Analysis, Protein; Software},
+	Month = {Jul},
+	Number = {13},
+	Pages = {1658-9},
+	Pmid = {16731699},
+	Pst = {ppublish},
+	Title = {Cd-hit: a fast program for clustering and comparing large sets of protein or nucleotide sequences},
+	Volume = {22},
+	Year = {2006},
+	Abstract = {MOTIVATION: In 2001 and 2002, we published two papers (Bioinformatics, 17, 282-283, Bioinformatics, 18, 77-82) describing an ultrafast protein sequence clustering program called cd-hit. This program can efficiently cluster a huge protein database with millions of sequences. However, the applications of the underlying algorithm are not limited to only protein sequences clustering, here we present several new programs using the same algorithm including cd-hit-2d, cd-hit-est and cd-hit-est-2d. Cd-hit-2d compares two protein datasets and reports similar matches between them; cd-hit-est clusters a DNA/RNA sequence database and cd-hit-est-2d compares two nucleotide datasets. All these programs can handle huge datasets with millions of sequences and can be hundreds of times faster than methods based on the popular sequence comparison and database search tools, such as BLAST.},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1093/bioinformatics/btl158}}
 
 @article{Enright2002,
 	Author = {Enright, A J and Van Dongen, S and Ouzounis, C A},

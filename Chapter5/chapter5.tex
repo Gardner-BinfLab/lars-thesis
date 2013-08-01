@@ -15,6 +15,8 @@
 
 \section{Methods}
 
+\textit{James Hadfield (University of Canterbury) ran the MCL clustering under my supervision. Paul P. Gardner (University of Canterbury) developed and ran the analysis of expression data, and assisted in manual curation of cluster alignments. I performed all other work described here. }
+
 \subsection{Genome-wise motif discovery}
 1853 embl format files containing the genomic sequence and annotations for 1639 were obtained from the EMBL European Nucleotide Archive completed bacterial genomes pages, see supplementary information for organisms and accession numbers.
 
@@ -22,9 +24,11 @@ Each embl file was screened independently for putative multi-copy termination mo
 
 \subsection{Clustering covariance models}
 
-In order to cluster CMs, I developed an extension of MCL-based clustering \parencite{Enright2002} to generative models of sequence variation. For each pair of CMs 1000 sequences were emitted from each CM and reciprocally scored with the other CM. The average of the negative log-transformed E-values was calculated, then shifted to be strictly positive by adding $\ln(1000)$ to generate a reciprocal similarity score (RSS)\nomenclature[Z]{RSS}{Reciprocal similarity score} appropriate for use with MCL. MCL was run with default parameters, and the 100 largest clusters, ranging in size from 332 to 6 CMs, were taken forward for further analysis.
+In order to cluster CMs, I developed an extension of MCL-based clustering \parencite{Enright2002} to generative models of sequence variation. For each pair of CMs 1000 sequences were emitted from each CM and reciprocally scored with the other CM. The average of the negative log-transformed E-values was calculated, then shifted to be strictly positive by adding $\ln(1000)$ to generate a reciprocal similarity score (RSS)\nomenclature[Z]{RSS}{Reciprocal similarity score} appropriate for use with MCL. MCL was run over the resulting RSS matrix, and the 100 largest clusters, ranging in size from 332 to 6 CMs, were taken forward for further analysis.
 
-\subsection{Curating cluster motifs}
+\subsection{Building cluster covariance models}
+
+To build covariance models which captured the diversity of sequences represented by each cluster, I searched the ten CMs with the highest sum of RSS scores in each cluster against the set of genomes which contributed motifs to the cluster. Sequences on which at least four CMs agreed on with an E-value of $<$ 1 were collected. The redundancy of the collected sequences was iteratively reduced in an alignment-free fashion using cd-hit \parencite{Li2006} with the parameters -G 0 -aL 0.1 -aS 0.3 until there were less than 2000 sequences remaining or there were no remaining sequences with $>$ 85\% nucleotide identity. Sequences were extended by 20 bases on each side to capture features which may not have been in the CMfinder-derived motifs, e.g. poorly conserved poly-U tracts. The resulting set of sequences was aligned using MAFFT Q-INS-i \parencite{Katoh2008} using McCaskill base-pairing probabilities, and secondary structures were predicted using CentroidAlifold \parencite{Hamada2009}, again with McCaskill base-pairing probabilities. CMs were built from the resulting cluster alignments, and sequences which did not match the CM with a bitscore of at least 20 were iteratively discarded. The resulting alignments were then manually curated using RALEE \parencite{Griffiths-Jones2005}, trimming non-conserved flanking sequence and extending the predicted secondary structure where possible. Conserved stop codons were specifically trimmed, so as not to bias subsequent searches.
 
 \subsection{Genome annotation}
 
