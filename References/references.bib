@@ -2,12 +2,138 @@
 %% http://bibdesk.sourceforge.net/
 
 
-%% Created for Lars Barquist at 2013-08-09 19:25:49 +0100 
+%% Created for Lars Barquist at 2013-08-12 14:29:09 +0100 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+
+@article{Quinlan2010,
+	Author = {Quinlan, Aaron R and Hall, Ira M},
+	Date-Added = {2013-08-12 14:26:12 +0100},
+	Date-Modified = {2013-08-12 14:26:12 +0100},
+	Doi = {10.1093/bioinformatics/btq033},
+	Journal = {Bioinformatics},
+	Journal-Full = {Bioinformatics (Oxford, England)},
+	Mesh = {Genome; Genomics; Internet; Software},
+	Month = {Mar},
+	Number = {6},
+	Pages = {841-2},
+	Pmc = {PMC2832824},
+	Pmid = {20110278},
+	Pst = {ppublish},
+	Title = {BEDTools: a flexible suite of utilities for comparing genomic features},
+	Volume = {26},
+	Year = {2010},
+	Abstract = {MOTIVATION: Testing for correlations between different sets of genomic features is a fundamental task in genomics research. However, searching for overlaps between features with existing web-based methods is complicated by the massive datasets that are routinely produced with current sequencing technologies. Fast and flexible tools are therefore required to ask complex questions of these data in an efficient manner.
+RESULTS: This article introduces a new software suite for the comparison, manipulation and annotation of genomic features in Browser Extensible Data (BED) and General Feature Format (GFF) format. BEDTools also supports the comparison of sequence alignments in BAM format to both BED and GFF features. The tools are extremely efficient and allow the user to compare large datasets (e.g. next-generation sequencing data) with both public and custom genome annotation tracks. BEDTools can be combined with one another as well as with standard UNIX commands, thus facilitating routine genomics tasks as well as pipelines that can quickly answer intricate questions of large genomic datasets.
+AVAILABILITY AND IMPLEMENTATION: BEDTools was written in C++. Source code and a comprehensive user manual are freely available at http://code.google.com/p/bedtools
+CONTACT: aaronquinlan@gmail.com; imh4y@virginia.edu
+SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics online.},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1093/bioinformatics/btq033}}
+
+@article{Li2009,
+	Author = {Li, Heng and Handsaker, Bob and Wysoker, Alec and Fennell, Tim and Ruan, Jue and Homer, Nils and Marth, Gabor and Abecasis, Goncalo and Durbin, Richard and {1000 Genome Project Data Processing Subgroup}},
+	Date-Added = {2013-08-12 14:15:22 +0100},
+	Date-Modified = {2013-08-12 14:15:22 +0100},
+	Doi = {10.1093/bioinformatics/btp352},
+	Journal = {Bioinformatics},
+	Journal-Full = {Bioinformatics (Oxford, England)},
+	Mesh = {Algorithms; Base Sequence; Computational Biology; Genome; Genomics; Molecular Sequence Data; Sequence Alignment; Sequence Analysis, DNA; Software},
+	Month = {Aug},
+	Number = {16},
+	Pages = {2078-9},
+	Pmc = {PMC2723002},
+	Pmid = {19505943},
+	Pst = {ppublish},
+	Title = {The Sequence Alignment/Map format and SAMtools},
+	Volume = {25},
+	Year = {2009},
+	Abstract = {SUMMARY: The Sequence Alignment/Map (SAM) format is a generic alignment format for storing read alignments against reference sequences, supporting short and long reads (up to 128 Mbp) produced by different sequencing platforms. It is flexible in style, compact in size, efficient in random access and is the format in which alignments from the 1000 Genomes Project are released. SAMtools implements various utilities for post-processing alignments in the SAM format, such as indexing, variant caller and alignment viewer, and thus provides universal tools for processing read alignments.
+AVAILABILITY: http://samtools.sourceforge.net.},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1093/bioinformatics/btp352}}
+
+@article{Langmead2012,
+	Author = {Langmead, Ben and Salzberg, Steven L},
+	Date-Added = {2013-08-12 14:14:35 +0100},
+	Date-Modified = {2013-08-12 14:14:35 +0100},
+	Doi = {10.1038/nmeth.1923},
+	Journal = {Nat Methods},
+	Journal-Full = {Nature methods},
+	Mesh = {Algorithms; Computational Biology; Databases, Genetic; Genome, Human; Humans; Sequence Alignment; Sequence Analysis, DNA},
+	Month = {Apr},
+	Number = {4},
+	Pages = {357-9},
+	Pmc = {PMC3322381},
+	Pmid = {22388286},
+	Pst = {epublish},
+	Title = {Fast gapped-read alignment with Bowtie 2},
+	Volume = {9},
+	Year = {2012},
+	Abstract = {As the rate of sequencing increases, greater throughput is demanded from read aligners. The full-text minute index is often used to make alignment very fast and memory-efficient, but the approach is ill-suited to finding longer, gapped alignments. Bowtie 2 combines the strengths of the full-text minute index with the flexibility and speed of hardware-accelerated dynamic programming algorithms to achieve a combination of high speed, sensitivity and accuracy.},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1038/nmeth.1923}}
+
+@article{Lindgreen2012,
+	Author = {Lindgreen, Stinus},
+	Date-Added = {2013-08-12 14:13:38 +0100},
+	Date-Modified = {2013-08-12 14:13:38 +0100},
+	Doi = {10.1186/1756-0500-5-337},
+	Journal = {BMC Res Notes},
+	Journal-Full = {BMC research notes},
+	Mesh = {Algorithms; Polymorphism, Single Nucleotide; Sequence Analysis, DNA},
+	Pages = {337},
+	Pmc = {PMC3532080},
+	Pmid = {22748135},
+	Pst = {epublish},
+	Title = {AdapterRemoval: easy cleaning of next-generation sequencing reads},
+	Volume = {5},
+	Year = {2012},
+	Abstract = {BACKGROUND: With the advent of next-generation sequencing there is an increased demand for tools to pre-process and handle the vast amounts of data generated. One recurring problem is adapter contamination in the reads, i.e. the partial or complete sequencing of adapter sequences. These adapter sequences have to be removed as they can hinder correct mapping of the reads and influence SNP calling and other downstream analyses.
+FINDINGS: We present a tool called AdapterRemoval which is able to pre-process both single and paired-end data. The program locates and removes adapter residues from the reads, it is able to combine paired reads if they overlap, and it can optionally trim low-quality nucleotides. Furthermore, it can look for adapter sequence in both the 5' and 3' ends of the reads. This is a flexible tool that can be tuned to accommodate different experimental settings and sequencing platforms producing FASTQ files. AdapterRemoval is shown to be good at trimming adapters from both single-end and paired-end data.
+CONCLUSIONS: AdapterRemoval is a comprehensive tool for analyzing next-generation sequencing data. It exhibits good performance both in terms of sensitivity and specificity. AdapterRemoval has already been used in various large projects and it is possible to extend it further to accommodate application-specific biases in the data.},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1186/1756-0500-5-337}}
+
+@article{Homer2009,
+	Author = {Homer, Nils and Merriman, Barry and Nelson, Stanley F},
+	Date-Added = {2013-08-12 14:12:59 +0100},
+	Date-Modified = {2013-08-12 14:12:59 +0100},
+	Doi = {10.1371/journal.pone.0007767},
+	Journal = {PLoS One},
+	Journal-Full = {PloS one},
+	Mesh = {Algorithms; Computational Biology; Computer Simulation; Genetic Techniques; Genetic Variation; Genome, Human; Humans; Reproducibility of Results; Sequence Alignment; Sequence Analysis, DNA; Software},
+	Number = {11},
+	Pages = {e7767},
+	Pmc = {PMC2770639},
+	Pmid = {19907642},
+	Pst = {epublish},
+	Title = {BFAST: an alignment tool for large scale genome resequencing},
+	Volume = {4},
+	Year = {2009},
+	Abstract = {BACKGROUND: The new generation of massively parallel DNA sequencers, combined with the challenge of whole human genome resequencing, result in the need for rapid and accurate alignment of billions of short DNA sequence reads to a large reference genome. Speed is obviously of great importance, but equally important is maintaining alignment accuracy of short reads, in the 25-100 base range, in the presence of errors and true biological variation.
+METHODOLOGY: We introduce a new algorithm specifically optimized for this task, as well as a freely available implementation, BFAST, which can align data produced by any of current sequencing platforms, allows for user-customizable levels of speed and accuracy, supports paired end data, and provides for efficient parallel and multi-threaded computation on a computer cluster. The new method is based on creating flexible, efficient whole genome indexes to rapidly map reads to candidate alignment locations, with arbitrary multiple independent indexes allowed to achieve robustness against read errors and sequence variants. The final local alignment uses a Smith-Waterman method, with gaps to support the detection of small indels.
+CONCLUSIONS: We compare BFAST to a selection of large-scale alignment tools -- BLAT, MAQ, SHRiMP, and SOAP -- in terms of both speed and accuracy, using simulated and real-world datasets. We show BFAST can achieve substantially greater sensitivity of alignment in the context of errors and true variants, especially insertions and deletions, and minimize false mappings, while maintaining adequate speed compared to other current methods. We show BFAST can align the amount of data needed to fully resequence a human genome, one billion reads, with high sensitivity and accuracy, on a modest computer cluster in less than 24 hours. BFAST is available at (http://bfast.sourceforge.net).},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1371/journal.pone.0007767}}
+
+@article{Leinonen2011,
+	Author = {Leinonen, Rasko and Sugawara, Hideaki and Shumway, Martin and {International Nucleotide Sequence Database Collaboration}},
+	Date-Added = {2013-08-12 14:12:10 +0100},
+	Date-Modified = {2013-08-12 14:12:10 +0100},
+	Doi = {10.1093/nar/gkq1019},
+	Journal = {Nucleic Acids Res},
+	Journal-Full = {Nucleic acids research},
+	Mesh = {Databases, Nucleic Acid; High-Throughput Nucleotide Sequencing},
+	Month = {Jan},
+	Number = {Database issue},
+	Pages = {D19-21},
+	Pmc = {PMC3013647},
+	Pmid = {21062823},
+	Pst = {ppublish},
+	Title = {The sequence read archive},
+	Volume = {39},
+	Year = {2011},
+	Abstract = {The combination of significantly lower cost and increased speed of sequencing has resulted in an explosive growth of data submitted into the primary next-generation sequence data archive, the Sequence Read Archive (SRA). The preservation of experimental data is an important part of the scientific record, and increasing numbers of journals and funding agencies require that next-generation sequence data are deposited into the SRA. The SRA was established as a public repository for the next-generation sequence data and is operated by the International Nucleotide Sequence Database Collaboration (INSDC). INSDC partners include the National Center for Biotechnology Information (NCBI), the European Bioinformatics Institute (EBI) and the DNA Data Bank of Japan (DDBJ). The SRA is accessible at http://www.ncbi.nlm.nih.gov/Traces/sra from NCBI, at http://www.ebi.ac.uk/ena from EBI and at http://trace.ddbj.nig.ac.jp from DDBJ. In this article, we present the content and structure of the SRA, detail our support for sequencing platforms and provide recommended data submission levels and formats. We also briefly outline our response to the challenge of data growth.},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1093/nar/gkq1019}}
 
 @article{VanDongen2008,
 	Author = {Van Dongen, Stijn},
