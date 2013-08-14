@@ -98,7 +98,7 @@ To further study lineage-specific biases in terminator composition, I took the t
 
 \subsection{Lineage-specific differences in RIT utilization}
 
-Of the 16 resulting cluster, 9 appeared to be canonical RITs on visual inspection (see figure \ref{fig:canonical}). All shared known features of canonical RITs, including a $5^\prime$ poly-A region, a G/C-rich hairpin, and a poly-U tail, but differ in stem length and base composition.
+Of the 16 resulting cluster, 9 appeared to be canonical RITs on visual inspection (see figure \ref{fig:canonical}). All shared known features of canonical RITs, including a $5^\prime$ poly-A region, a G/C-rich hairpin, and a poly-U tail, but differ in stem length, hairpin loop length, and base composition. An interesting feature of these models is the universal presence of base-pairing interactions between the poly-A and poly-U regions. Though it has been widely assumed that the poly-A region's function is primarily to contribute to bidirectional activity of RITs, some studies have shown that complementarity between the poly-A and poly-U region increase termination efficiency \parencite{Abe1996, Chen2013}, presumably by contributing to the ratcheting effect of hairpin formation on the poly-U tail. In fact, a recent study showed that strong terminators with clear poly-A regions generally do not posses bidirectional activity, suggesting that the primary function of the poly-A region is to contribute to this ratcheting \parencite{Chen2013}. I have observed covariation within many of the A-U pairs in our terminator models, supporting this observation.
 
 \begin{figure}[htp]
 \begin{center}
@@ -108,6 +108,8 @@ Of the 16 resulting cluster, 9 appeared to be canonical RITs on visual inspectio
 \label{fig:canonical}
 \end{center}
 \end{figure}
+
+To validate our RIT predictions, publicly available RNA-seq datasets were collected and plots summarizing the behavior of transcription across the predictions were created (see Methods for details). In perfect digital transcriptomic data, we would expect to observe the majority of transcripts terminating precisely within the poly-U tail of annotated RITs. 
 
 \begin{figure}[htp]
 \begin{center}
