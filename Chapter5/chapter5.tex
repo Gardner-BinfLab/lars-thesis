@@ -103,7 +103,7 @@ To further study lineage-specific biases in terminator composition, I took the t
 \begin{figure}[htp]
 \begin{center}
 \includegraphics[width=14cm]{canonical}
-\caption[Most informative sequences for nine canonical RIT clusters]{\textbf{Most informative sequence for nine canonical RIT clusters.} Each cluster consensus model was searched across all genomes and sequence hits with an FDR of 0.01 were aligned to the model. Duplicate sequences were removed and 5000 randomly sampled sequences were used to calculate the most informative sequence (MIS)\nomenclature[Z]{MIS}{Most informative sequence}, a projection of any bases with frequencies above .25 onto IUPAC characters \parencite{Freyhult2005}. Structures were drawn using R2R \parencite{Weinberg2011}. From left to right, images shown represent consensus alignments for clusters 16, 25, 29 (top row); 37, 88, 89 (middle row); 95, and 96 (bottom row).
+\caption[Most informative sequences for nine canonical RIT clusters]{\textbf{Most informative sequence for nine canonical RIT clusters.} Each cluster consensus model was searched across all genomes and sequence hits with an FDR of 0.01 were aligned to the model. Duplicate sequences were removed and 5000 randomly sampled sequences were used to calculate the most informative sequence (MIS)\nomenclature[Z]{MIS}{Most informative sequence}, a projection of any bases with frequencies above .25 onto IUPAC characters \parencite{Freyhult2005}. Structures were drawn using R2R \parencite{Weinberg2011}. From left to right, images shown represent consensus alignments for clusters 16, 18, 25 (top row); 29, 37, 88 (middle row); 89, 95, and 96 (bottom row).
 } 
 \label{fig:canonical}
 \end{center}
@@ -118,7 +118,7 @@ To validate RIT predictions, publicly available RNA-seq datasets were collected 
 \begin{figure}[htp]
 \begin{center}
 \includegraphics[width=16cm]{can_expr}
-\caption[Analysis of diverse RNA-seq datasets confirm canonical terminator activity]{\textbf{Analysis of diverse RNA-seq datasets confirm canonical terminator activity.} These plots present representative analysis for putative attenuation motifs (PAM)\nomenclature[Z]{PAM}{Putative attenuation motif} by the cluster 37 canonical terminator consensus model. The median expression over PAMs with an upstream mean expression of at least 10 reads per position is plotted in blue. Random positions meeting this same constraint are plotted in grey, and the dashed grey lines provide a 75\% confidence interval for this estimate. RNA-seq data (from left to right) drawn from experiments in the $\gamma$-proteobacterium \textit{Vibrio cholerae} \parencite{Mandlik2011}, the $\beta$-proteobacterium \textit{Neisseria gonorrhoeae} \parencite{Isabella2011}, and the Bacteroidetes \textit{Porphyromonas gingivalis} \parencite{Hovik2012}.
+\caption[Analysis of diverse RNA-seq datasets confirm canonical terminator activity]{\textbf{Analysis of diverse RNA-seq datasets confirm canonical terminator activity.} These plots present representative analysis for putative attenuation motifs (PAM)\nomenclature[Z]{PAM}{Putative attenuation motif} predicted by the cluster 37 canonical terminator consensus model. The median expression over PAMs with an upstream mean expression of at least 10 reads per position is plotted in blue. Random positions meeting this same constraint are plotted in grey, and the dashed grey lines provide a 75\% confidence interval for this estimate. RNA-seq data (from left to right) drawn from experiments in the $\gamma$-proteobacterium \textit{Vibrio cholerae} \parencite{Mandlik2011}, the $\beta$-proteobacterium \textit{Neisseria gonorrhoeae} \parencite{Isabella2011}, and the Bacteroidetes \textit{Porphyromonas gingivalis} \parencite{Hovik2012}.
 } 
 \label{fig:can_expr}
 \end{center}
@@ -126,6 +126,34 @@ To validate RIT predictions, publicly available RNA-seq datasets were collected 
 
 Despite these potential problems, when taken in aggregate, we can observe a clear signal from the termination activity of canonical RITs (see figure \ref{fig:can_expr}).
 
+\begin{figure}[htp]
+\begin{center}
+\includegraphics[width=16cm]{enrichment.png}
+\caption[Analysis of diverse RNA-seq datasets confirm canonical terminator activity]{\textbf{Analysis of diverse RNA-seq datasets confirm canonical terminator activity.} These plots present representative analysis for putative attenuation motifs (PAM)\nomenclature[Z]{PAM}{Putative attenuation motif} predicted by the cluster 37 canonical terminator consensus model. The median expression over PAMs with an upstream mean expression of at least 10 reads per position is plotted in blue. Random positions meeting this same constraint are plotted in grey, and the dashed grey lines provide a 75\% confidence interval for this estimate. RNA-seq data (from left to right) drawn from experiments in the $\gamma$-proteobacterium \textit{Vibrio cholerae} \parencite{Mandlik2011}, the $\beta$-proteobacterium \textit{Neisseria gonorrhoeae} \parencite{Isabella2011}, and the Bacteroidetes \textit{Porphyromonas gingivalis} \parencite{Hovik2012}.
+} 
+\label{fig:enrichment}
+\end{center}
+\end{figure}
+
 \subsection{Non-canonical putative attenuators of transcription}
+
+\begin{wrapfigure}{hr}{0.5\textwidth}
+\begin{center}
+\includegraphics[width=7cm]{clus9}
+\caption[Neisserial DNA uptake sequence terminator]{\textbf{Neisserial DNA uptake sequence terminator.} On the left, consensus secondary structure and MIS for 2012 cluster 9 predicted terminators in the order Neisseriales. On the right, median expression over predicted terminator sequences derived from RNA-seq experiments in \textit{Neisseria gonorrhoeae} \parencite{Isabella2011}.
+} 
+\label{fig:clus9}
+\end{center}
+\end{wrapfigure}
+
+\begin{figure}[htp]
+\begin{center}
+\includegraphics[width=14cm]{clus7}
+\caption[Analysis of diverse RNA-seq datasets confirm canonical terminator activity]{\textbf{Analysis of diverse RNA-seq datasets confirm canonical terminator activity.} These plots present representative analysis for putative attenuation motifs (PAM)\nomenclature[Z]{PAM}{Putative attenuation motif} predicted by the cluster 37 canonical terminator consensus model. The median expression over PAMs with an upstream mean expression of at least 10 reads per position is plotted in blue. Random positions meeting this same constraint are plotted in grey, and the dashed grey lines provide a 75\% confidence interval for this estimate. RNA-seq data (from left to right) drawn from experiments in the $\gamma$-proteobacterium \textit{Vibrio cholerae} \parencite{Mandlik2011}, the $\beta$-proteobacterium \textit{Neisseria gonorrhoeae} \parencite{Isabella2011}, and the Bacteroidetes \textit{Porphyromonas gingivalis} \parencite{Hovik2012}.
+} 
+\label{fig:clus7}
+\end{center}
+\end{figure}
+
 
 \section{Discussion}
