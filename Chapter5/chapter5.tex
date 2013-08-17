@@ -131,15 +131,21 @@ Despite these potential problems, when taken in aggregate, a clear signal from t
 \begin{figure}[htp]
 \begin{center}
 \includegraphics[width=16cm]{enrichment.png}
-\caption[Analysis of diverse RNA-seq datasets confirm canonical terminator activity]{\textbf{Analysis of diverse RNA-seq datasets confirm canonical terminator activity.} These plots present representative analysis for putative attenuation motifs (PAM)\nomenclature[Z]{PAM}{Putative attenuation motif} predicted by the cluster 37 canonical terminator consensus model. The median expression over PAMs with an upstream mean expression of at least 10 reads per position is plotted in blue. Random positions meeting this same constraint are plotted in grey, and the dashed grey lines provide a 75\% confidence interval for this estimate. RNA-seq data (from left to right) drawn from experiments in the $\gamma$-proteobacterium \textit{Vibrio cholerae} \parencite{Mandlik2011}, the $\beta$-proteobacterium \textit{Neisseria gonorrhoeae} \parencite{Isabella2011}, and the Bacteroidetes \textit{Porphyromonas gingivalis} \parencite{Hovik2012}.
+\caption[Canonical RIT enrichment on the NCBI taxonomy]{\textbf{Canonical RIT enrichment on the NCBI taxonomy.} These figures show the extent of canonical RIT enrichment in each genome for canonical RIT clusters 18 (left) and 37 (right). Each leaf node represents a single genome, and colors represent -$\log_{10}$ hypergeometric p-values ranging on a scale from light blue (no enrichment) to purple (high enrichment). Clades with large numbers of enriched genomes are annotated. Figures drawn using the Interactive Tree of Life webserver \parencite{Letunic2011}.
 } 
 \label{fig:enrichment}
 \end{center}
 \end{figure}
 
+As noted previously, many of the clusters recovered by the motif-discovery pipeline appeared to consist largely of elements discovered in related genomes. The final consensus alignments constructed from these clusters have broadly similar architectures (see figure \ref{fig:canonical}), so it was unclear if they would retain the characteristics which allowed the RSS-based MCL clustering to recover the phylogenetic relationships between host genomes. To provide an initial assessment of the lineage-specificity of the motifs, I performed a hypergeometric test for element enrichment in each genome for each cluster. This revealed clear patterns of lineage-specific enrichment for each element (see figure \ref{fig:enrichment} for representative examples). 
 
+Two alternative hypotheses could explain these patterns. The first, which I will term the global selection hypothesis, is selection for a particular form of terminator motif. This could be either active selection for robust terminator activity in the face of an evolving transcription apparatus \parencite{Iyer2004}, or an incidental effect of selection for other genomic properties such as G/C content, or more likely, a combination of both. The second, which I will call the transposition hypothesis, would be based on the distribution of particular RIT forms by transposable elements and would imply an evolutionary relationship between members of a particular RIT cluster. Transposable elements have previously been suggested as a means for the distribution of RITs later exapted as elements of $5^\prime$ cis-regulatory elements by \textcite{Naville2010}, and there is no reason a similar mechanism could not deposit $3^\prime$ RITs. Given the apparently ancient origins of many of the observed lineage-specific enrichments, the deposited RITs would subsequently have to be somewhat protected from random mutations preserving termination activity by a selective process, though as the degree of sequence and structural divergence allowed by the CM-based classification is currently unclear, this may well be possible. Of course, these two hypotheses are not mutually exclusive, and could act together to explain the observed pattern of terminator enrichment. It is important to note that enrichment of one RIT cluster does not imply the exclusion of alternative terminator structures in a particular genome. As seen in figure \ref{fig:can_expr} RIT clusters are present and apparently active outside the genomes they are enriched in; in this case, cluster 37, enriched primarily in the Firmicutes, is present at fairly low copy numbers in other phyla. Whether this reflects convergence or shared descent of these elements is unclear.
 
 \subsection{Non-canonical putative attenuators of transcription}
+
+Besides the canonical RITs discussed so far, the motif discovery pipeline uncovered 7 clusters which did not fit the canonical RIT model of a G/C-rich hairpin followed by a poly-U tract. I will refer to these elements as putative attenuators of transcription (PAMs). These elements tend to have much narrower host ranges than the canonical RITs discussed above; I discuss a few of them in the following sections.
+
+\subsubsection{The Neisserial DNA uptake sequence PAM}
 
 \begin{wrapfigure}{hr}{0.5\textwidth}
 \begin{center}
@@ -150,14 +156,30 @@ Despite these potential problems, when taken in aggregate, a clear signal from t
 \end{center}
 \end{wrapfigure}
 
+This first, and perhaps one of the most distinctive, of these elements is a previously known PAM containing a DNA uptake sequence (DUS\nomenclature[Z]{DUS}{DNA uptake sequence}) in the $\beta$-proteobacterial order Neisseriales. The Neisseriales frequently exchange genetic material, leading to difficulties in studying their population structure and so-called `fuzzy' species \parencite{Corander2012}. This exchange is mediated by specific systems \parencite{Hamilton2006}. Neisserial species are able to excrete DNA for donation through a type 4 secretion system and/or autolysis. A type 4 pilus-like system is then thought to specifically bind DNA containing a 10-base DUS (GCCGTCTGAA in \textit{Neisseria gonorrhoeae}), which is then incorporated in to the genome through homologous recombination. Recent work has shown that there are a number of distinct `dialects' of DUS which act to reduce the efficiency of uptake between distantly related species within the order \parencite{Frye2013}.
+
+The presence of the \textit{Neisseria} DUS in terminator-like structures has long been noted \parencite{Goodman1988}, and was discussed extensively  in the study reporting the development of TransTermHP \parencite{Kingsford2007}. However, the termination activity of this element has never been experimentally tested. Using our RNA-seq collection, we are able to show that this element is indeed associated with a sharp drop in transcription (see figure \ref{fig:clus9}).
+
+\subsubsection{The Actionbacterial PAM}
+
 \begin{figure}[htp]
 \begin{center}
 \includegraphics[width=14cm]{clus7}
-\caption[Analysis of diverse RNA-seq datasets confirm canonical terminator activity]{\textbf{Analysis of diverse RNA-seq datasets confirm canonical terminator activity.} These plots present representative analysis for putative attenuation motifs (PAM)\nomenclature[Z]{PAM}{Putative attenuation motif} predicted by the cluster 37 canonical terminator consensus model. The median expression over PAMs with an upstream mean expression of at least 10 reads per position is plotted in blue. Random positions meeting this same constraint are plotted in grey, and the dashed grey lines provide a 75\% confidence interval for this estimate. RNA-seq data (from left to right) drawn from experiments in the $\gamma$-proteobacterium \textit{Vibrio cholerae} \parencite{Mandlik2011}, the $\beta$-proteobacterium \textit{Neisseria gonorrhoeae} \parencite{Isabella2011}, and the Bacteroidetes \textit{Porphyromonas gingivalis} \parencite{Hovik2012}.
+\caption[Actinobacterial PAM]{\textbf{Actinobacterial PAM.} These plots present representative analysis for putative attenuation motifs (PAM)\nomenclature[Z]{PAM}{Putative attenuation motif} predicted by the cluster 37 canonical terminator consensus model. The median expression over PAMs with an upstream mean expression of at least 10 reads per position is plotted in blue. Random positions meeting this same constraint are plotted in grey, and the dashed grey lines provide a 75\% confidence interval for this estimate. RNA-seq data (from left to right) drawn from experiments in the $\gamma$-proteobacterium \textit{Vibrio cholerae} \parencite{Mandlik2011}, the $\beta$-proteobacterium \textit{Neisseria gonorrhoeae} \parencite{Isabella2011}, and the Bacteroidetes \textit{Porphyromonas gingivalis} \parencite{Hovik2012}.
 } 
 \label{fig:clus7}
 \end{center}
 \end{figure}
 
+\subsection{Type 1 integron attC sites}
+
+\begin{wrapfigure}{hl}{0.5\textwidth}
+\begin{center}
+\includegraphics[width=7cm]{clus52}
+\caption[Type 1 integron attC sites]{\textbf{Type 1 integron attC sites.} On the left, consensus secondary structure and MIS for 420 cluster 52 predicted terminators in the Proteobacteria. On the right, median expression over predicted terminator sequences derived from RNA-seq experiments in \textit{Vibrio cholerae} \parencite{Mandlik2011}.
+} 
+\label{fig:clus52}
+\end{center}
+\end{wrapfigure}
 
 \section{Discussion}
