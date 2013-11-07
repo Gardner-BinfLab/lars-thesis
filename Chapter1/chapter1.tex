@@ -21,6 +21,7 @@ A common approach to identifying genomic regions required for survival under a p
 
 The application of high-throughput sequencing to the challenge of determining insertion location and prevalence solves many of these problems. Interestingly, the first application of transposon-insertion sequencing, developed by \textcite{Hutchison1999}, actually predates the development of microarray-based methods. However, this was applied to libraries of only approximately 1000 transposon mutants in highly reduced {\it Mycoplasma} genomes, and the difficulty of sequencing at the time prevented wide spread adoption or high resolution. Modern high-throughput sequencing technology allows the methods discussed in this chapter to routinely monitor as many as one million mutants simultaneously in virtually any genetically tractable microorganism. 
 
+\clearpage
 \input{Chapter1/Chapter1Tables/studies.tex}
 
 \section{Protocols}
@@ -28,7 +29,7 @@ Several methods were developed concurrently for high-throughput sequencing of tr
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=14cm]{protocols}
+\includegraphics[width=14cm]{protocols.png}
 \caption[Transposon-insertion sequencing protocols]{\textbf{Transposon-insertion sequencing protocols.} An illustration of the workflow typical of transposon-insertion sequencing protocols. Transposons are represented by pink lines, sequencing adaptors by blue, genomic DNA by black, and PCR primers by green. Mutants are generated through either {\it in vivo} or {\it in vitro} transposition and subsequent selection for antibiotic resistance. These mutants are pooled, and optionally competed in test conditions, then genomic DNA is extracted and fragmented by restriction digest or physical shearing. Sequencing adaptors are ligated, some protocols then perform a step to purify fragments containing transposon insertions, and PCR with transposon- and adapter-specific primers is used to specifically enrich for transposon-containing fragments. The fragments are then sequenced and mapped back to a reference genome to uniquely identify insertion sites with nucleotide-resolution. Dashed boxes indicate steps which differ between protocols.
 } 
  \label{fig:protocols}
