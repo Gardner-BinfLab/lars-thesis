@@ -21,14 +21,12 @@
 
 \textit{Salmonella} is a Gram-negative, $\gamma$-proteobacterial genus within the order Enterobacteriales, consisting of two species: \textit{Salmonella enterica} and \textit{Salmonella bongori}, though a contested third species, \textit{Salmonella subterranea}, has recently been proposed \parencite{Shelobolina2004}. Based on phylogenetic analyses of 16S and conserved amino acid sequences, {\it Salmonella} is most closely related to the genuses \textit{Escherichia}, \textit{Shigella}, and \textit{Citrobacter} \parencite{Paradis2005, Pham2007, Wu2009}. Molecular clock analyses suggest that \textit{Salmonella} and \textit{Escherichia} shared a common ancestor between 100 and 160 million years ago \parencite{Ochman1987, Doolittle1996}, though complete genetic isolation of the two genera may have taken 70 million years \parencite{Retchless2007}. During the time since their divergence \textit{Escherichia} has become established as a mammalian gut commensal, though multiple independent origins of the \textit{Shigella} and other pathogenic phenotypes within the genus show that a disease phenotype can be developed fairly easily through the horizontal acquisition of virulence determinants and the silencing of anti-virulence loci \parencite{Kaper2004,Prosseda2012}. Despite sharing the majority of their genomes with \textit{Escherichia} and having broadly similar metabolic capabilities \parencite{AbuOun2009}, the salmonellae exist primarily as pathogens, though are possibly commensal in some reptiles \parencite{Mermin2004, Bauwens2006}. 
 
-\begin{figure}[htp]
-\begin{center}
-\includegraphics[angle=270, width=10.6cm]{bongori.png}
+\begin{FPfigure}
 \caption[Genomic acquisitions in the evolution of the salmonellae]{\textbf{Genomic acquisitions in the evolution of the salmonellae.} Traits shared by the common ancestor are depicted in blue; those unique to {\it S. bongori} are shown in red and those unique to {\it S. enterica} subspecies {\it enterica} serovar Typhi in green. Arrows, {\it Salmonella} Pathogenicity Islands (SPIs); extended ovals, fimbriae; circles, effectors; small ovals and needle complexes, secretion systems. Metabolic pathways: lines, enzymatic reactions; open squares, carbohydrates; ovals, pyrimidines; open circles, other substrates; filled shapes, phosphorylated. Novel effectors acquired by {\it S. bongori} are secreted by the type III secretion system encoded on SPI-1. SPI-3a and 3b carry the same genes in both organisms but are fused into one island in {\it S.} Typhi. SPI-5a also carries the same genes in both organisms, but a further 3 kb (termed SPI-5b) has fused to SPI-5a in {\it S.} Typhi. *indicates a pseudogene. Reproduced from \textcite{Fookes2011} under a Creative Commons Attribution License (CCAL). 
 } 
+\includegraphics[angle=270, width=.9\textwidth]{bongori.png}
 \label{fig:bongori}
-\end{center}
-\end{figure}
+\end{FPfigure}
 
 The difference in dominant phenotype between {\it Escherichia} and {\it Salmonella} appears to be largely due to the acquisition of virulence determinants which opened new niches to ancestral salmonellae (see figure \ref{fig:bongori}). Many of the virulence determinants characteristic of the salmonellae are encoded on large genomic islands with sizes between $\sim$6 and 140 kilobases, termed \textit{Salmonella} Pathogenicity Islands (SPIs) \parencite{Hensel2004}. These islands encode a diverse array of pathogenicity-related functions including secretion systems, toxins, antibiotic resistances, and lipopolysaccharide (LPS)\nomenclature[Z]{LPS}{Lipopolysaccharide} and capsular modifications. In particular, the acquisition of SPI-1, encoding a type 3 secretion system (T3SS), and various fimbriae by the ancestral \textit{Salmonella} likely enabled invasion of cells in the intestinal epithelium and escape from competition with other members of the gut microbiota \parencite{Baumler1997}. \textit{S. bongori} appears to have only acquired a single additional SPI since its divergence from \textit{S. enterica} and likely retains a lifestyle more similar to the ancestral \textit{Salmonella}, though there is evidence for additional adaptation to its niche in the reptilian gut \parencite{Fookes2011}. 
 
@@ -153,14 +151,13 @@ To compare differences between requirements for orthologous genes in both serova
 
 \input{Chapter2/Chapter2Tables/stm_uniq.tex}
 
-\begin{figure}[htp]
-\begin{center}
-\includegraphics[width=14cm]{cell_surface}
+\begin{FPfigure}
+\centering
 \caption[Comparison of cell surface operon structure and requirements]{\textbf{Comparison of cell surface operon structure and requirements.} Diagram illustrating cell surface operons with different requirement patterns in {\it S.} Typhimurium and {\it S.} Typhi. The top figure is of an uncharacterized operon putatively involved in cell wall biogenesis, while the bottom figure shows a portion of the rfb operon involved in O-antigen biosynthesis. Plots along the top and bottom of each figure show insertions in {\it S.} Typhimurium and {\it S.} Typhi, respectively, with read depth on the y-axis with a maximum cut-off of 100 reads. Genes in blue are required in {\it S.} Typhimurium, genes in white are pseudogenes; others are in grey. Grey rectangles represent BLAST hits between orthologous genes, with percent nucleotide identity colored on the scale to the right of each figure.
 } 
+\includegraphics[angle=90,height=\textheight]{cell_surface}
 \label{fig:cell_surface}
-\end{center}
-\end{figure}
+\end{FPfigure}
 
 A major difference between the two serovars is in the requirement for genes involved in cell wall biosynthesis (see figure \ref{fig:cell_surface}). A set of four genes (SL0702, SL0703, SL0706, and SL0707) in an operonic structure putatively involved in cell wall biogenesis is required in {\it S.} Typhimurium but not in {\it S.} Typhi. The protein encoded by SL0706 is a pseudogene in {\it S.} Typhi (Ty2 unique ID: t2152) due to a 1bp deletion at codon 62 that causes a frameshift. This operon contains an additional two pseudogenes in {\it S.} Typhi (t2154 and t2150), as well as a single different pseudogene (SL0700) in {\it S.} Typhimurium, indicating that this difference in gene requirements reflects the evolutionary adaptation of these serovars to their respective niches. Similarly, four genes ({\it rfbV}, {\it rfbX}, {\it rfbJ} and {\it rfbF}) within an O-antigen biosynthetic operon are required by {\it S.} Typhimurium but not {\it S.} Typhi. There appears to have been a shuffling of O-antigen biosynthetic genes since the divergence between the two serovars, and {\it rfbJ}, encoding a CDP-abequose\nomenclature[Z]{CDP}{Cytidine diphosphate glucose} synthase, has been lost from {\it S.} Typhi altogether. These broader requirements for cell wall-associated biosynthetic and transporter genes suggest that surface structure biogenesis is of greater importance in {\it S.} Typhimurium.
 

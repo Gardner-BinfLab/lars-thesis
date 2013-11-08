@@ -11,7 +11,8 @@ Chapter 1
 pg 4: reformatted table with larger text.
 
 Chapter 2
-pg 21, 23: rotated and enlarged image.
-pg 27, 28: corrected language: "S. Typhimurium strain SL3261 contains a deletion relative to the parent strain, SL1344, was used to generate the large transposon mutant library." -> " S. Typhimurium strain SL3261 was used to generate the transposon mutant library and contains a deletion relative to the parent strain, SL1344"
+pg 21, 24: rotated and enlarged figure.
+pg 27, 29: corrected language: "S. Typhimurium strain SL3261 contains a deletion relative to the parent strain, SL1344, was used to generate the large transposon mutant library." -> " S. Typhimurium strain SL3261 was used to generate the transposon mutant library and contains a deletion relative to the parent strain, SL1344"
 
-pg 33, 34: changed references to A and B in caption to left and right. 
+pg 33, 35: changed references to A and B in caption to left and right. 
+pg 41, 44: rotated and enlarged figure
