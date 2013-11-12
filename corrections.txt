@@ -13,6 +13,9 @@ pg 4: reformatted table with larger text.
 Chapter 2
 pg 21, 24: rotated and enlarged figure.
 pg 27, 29: corrected language: "S. Typhimurium strain SL3261 contains a deletion relative to the parent strain, SL1344, was used to generate the large transposon mutant library." -> " S. Typhimurium strain SL3261 was used to generate the transposon mutant library and contains a deletion relative to the parent strain, SL1344"
-
+pg 31, 34: modified image to remove outer tracks with complicated function classifications - there is no just a single track showing non-required genes in their place.
 pg 33, 35: changed references to A and B in caption to left and right. 
-pg 41, 44: rotated and enlarged figure
+pg 34, 37: increased font size in table 2.1
+pg 41, 45: rotated and enlarged figure
+pg 42, 47: rotated and enlarged figure
+pg 43, 48: increased font size of table 2.5
