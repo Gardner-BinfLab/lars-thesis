@@ -79,7 +79,7 @@
 \definecolor{darkblue}{cmyk}{0.94,0.63,0.04,0.07}
 \definecolor{darkred}{cmyk}{0.22,1.00,1.00,0.17}
 
-\usepackage[natbib=true, style=authoryear, citestyle=authoryear, maxbibnames=20,mergedate=false,hyperref=false,backref=true,dashed=false,uniquename=false,uniquelist=false,maxcitenames=1]{biblatex}
+\usepackage[natbib=true, style=authoryear, citestyle=authoryear, maxbibnames=20,hyperref=false,backref=true,firstinits,dashed=false,uniquename=false,uniquelist=false,maxcitenames=1,doi=false,isbn=false,url=false]{biblatex}
 \DefineBibliographyStrings{english}{%
     backrefpage  = {see p.}, % for single page number
     backrefpages = {see pp.} % for multiple page numbers
