@@ -16,6 +16,14 @@ pg 27, 29: corrected language: "S. Typhimurium strain SL3261 contains a deletion
 pg 31, 34: modified image to remove outer tracks with complicated function classifications - there is no just a single track showing non-required genes in their place.
 pg 33, 35: changed references to A and B in caption to left and right. 
 pg 34, 37: increased font size in table 2.1
+pg 36, 39: italicized Salmonella
 pg 41, 45: rotated and enlarged figure
 pg 42, 47: rotated and enlarged figure
 pg 43, 48: increased font size of table 2.5
+pg 47, 52: italicized Salmonella
+
+Chapter 3
+No corrections
+
+Chapter 4
+
