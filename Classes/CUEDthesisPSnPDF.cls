@@ -41,7 +41,7 @@
 %\usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{eucal}
-\usepackage[english]{babel}
+\usepackage[american]{babel}
 \usepackage[usenames, dvipsnames]{color}
 %\usepackage[perpage]{footmisc}
 %\usepackage[round,authoryear]{natbib}

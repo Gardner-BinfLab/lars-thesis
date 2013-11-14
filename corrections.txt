@@ -3,6 +3,7 @@ Where the page number has changed, the numbers are listed as “pg old number, n
 General changes:
 Removed duplicated ORF entry in ‘Nomenclature’.
 Modified citation style to only include one author.
+Edited bibliography to remove redundant information, made journal names consistent.
 
 Introduction
 “…a life-threatening system disease exclusively in humans…” -> “…a life-threatening systemic disease exclusively in humans…” 
