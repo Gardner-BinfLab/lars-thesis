@@ -2,7 +2,7 @@ Where the page number has changed, the numbers are listed as “pg old number, n
 
 General changes:
 Removed duplicated ORF entry in ‘Nomenclature’.
-Modified citation style to only include one author.
+Modified citation style to only include one author and year.
 Edited bibliography to remove redundant information, made journal names consistent.
 
 Introduction
@@ -34,6 +34,8 @@ pg 97, 105: de-italicized Mycobacteria
 Chapter 5:
 Changed PAM to TAM (terminus associated motif)
 pg 99, 107: de-italicized Mycobacteria
+pg 111, 120: Increased figure size, modified color scheme
+pg 114, 123: Increased figure size, modified color scheme
 pg 114, : On further research, it looks like Neisseria species are actually thought to secrete DNA via a T4SS; I've included an additional primary research article to support this assertion: Hamilton, 2005 "Neisseria gonorrhoeae secretes chromosomal DNA via a novel type IV secretion system"
 pg 114, : Actionbacteria -> Actinobacteria
 pg 114, : de-italicized Mycobacteria

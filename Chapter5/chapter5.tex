@@ -1,4 +1,4 @@
-TAM% \pagebreak[4]
+% \pagebreak[4]
 % \hspace*{1cm}
 % \pagebreak[4]
 % \hspace*{1cm}
@@ -115,14 +115,12 @@ Of the 16 resulting clusters, 9 appeared to be canonical RITs on visual inspecti
 
 To validate RIT predictions, publicly available RNA-seq datasets were collected and plots summarizing the behavior of transcription across the predictions were created (see Methods for details). There are some difficulties in using RNA-seq data to validate terminator activity. In perfect digital transcriptomic data, we would expect to observe the majority of transcripts terminating precisely within the poly-U tail of annotated RITs. Unfortunately, modern high-throughput sequencing technologies do not sequence complete RNA molecules, rather sequencing short stretches of size-selected fragmented RNA libraries. These fragments in these libraries are incidentally selected for sequence composition during both library amplification through PCR and sequencing, often with poorly understood biases, giving rise to the characteristically hilly appearance of these data sets when visualized. Additonally, protocols for the sequencing of RNA retaining strand information generally sequence all fragments of a particular RNA molecule in the same direction (for example, see \textcite{Croucher2009}). As a result, if we assume that the fragmentation proceeds roughly by a Poisson process, this will naturally lead to an exponential decay in apparent expression along the $3^\prime$ region of each transcript. Newer data sets with longer read lengths tend to give cleaner indications of termination activity. Finally, in some data sets we observed patterns of reported transcription that are suggestive of degradation of the RNA by $3^\prime$ exonucleases or high levels of genomic DNA contamination. 
 
-\begin{figure}[htp]
-\begin{center}
-\includegraphics[width=16cm]{can_expr}
-\caption[Analysis of diverse RNA-seq datasets confirm canonical terminator activity]{\textbf{Analysis of diverse RNA-seq datasets confirm canonical terminator activity.} These plots present representative analysis for terminus associated motifs (TAMs)\nomenclature[Z]{TAM}{terminus associated motif} predicted by the cluster 37 canonical terminator consensus model. The median expression over TAMs with an upstream mean expression of at least 10 reads per position is plotted in blue. Random positions meeting this same constraint are plotted in grey, and the dashed grey lines provide a 75\% confidence interval for this estimate. RNA-seq data (from left to right) drawn from experiments in the $\gamma$-proteobacterium \textit{Vibrio cholerae} \parencite{Mandlik2011}, the $\beta$-proteobacterium \textit{Neisseria gonorrhoeae} \parencite{Isabella2011}, and the Bacteroidetes \textit{Porphyromonas gingivalis} \parencite{Hovik2012}.
+\begin{FPfigure}
+\parbox[c][\textheight][c]{\textwidth}{\includegraphics[width=16cm]{can_expr_v2}}
+\caption[Analysis of diverse RNA-seq datasets confirm canonical terminator activity]{\textbf{Analysis of diverse RNA-seq datasets confirm canonical terminator activity.} These plots present representative analysis for terminus associated motifs (TAMs)\nomenclature[Z]{TAM}{terminus associated motif} predicted by the cluster 37 canonical terminator consensus model. The median expression over TAMs with an upstream mean expression of at least 10 reads per position is plotted in blue. Random positions meeting this same constraint are plotted in grey, and the dashed grey lines provide a 75\% confidence interval for this estimate. RNA-seq data (from left to right) drawn from experiments in the $\gamma$-proteobacterium \textit{Vibrio cholerae} \parencite{Mandlik2011}, the $\beta$-proteobacterium \textit{Neisseria gonorrhoeae} \parencite{Isabella2011}, and the Bacteroidetes \textit{Porphyromonas gingivalis} (\textcite{Hovik2012}; bottom).
 } 
 \label{fig:can_expr}
-\end{center}
-\end{figure}
+\end{FPfigure}
 
 Despite these potential problems, when taken in aggregate, a clear signal from the termination activity of canonical RITs can be observed (see figure \ref{fig:can_expr} for examples). These plots present median read counts over predicted RITs as a robust estimator of the mean expression. As a control, the median read counts over randomly selected positions were similarly selected. A clear difference in the change in the level of transcription over RITs can be observed as compared to random positions, often much larger than the difference between the top estimate of a 75\% confidence interval before and the bottom estimate after these randomly positions. This pattern appears to hold for all of the canonical RIT clusters discovered in the course of this work. I did observe cases where there did not appear to be the characteristic drop in transcription across predicted canonical RITs; however, these could generally be attributed to high levels of `background transcription' (possibly resulting from sample contamination with genomic DNA) confounding the selection criteria on element upstream transcription (see methods for details). An adaptive selection criteria based on the median absolute deviation from the median transcription across all positions in the genome, rather than an arbitrary cut-off on mean transcription, may correct this, and we are currently pursuing this possibility. As it stands, these plots provide a qualitative indication of termination activity. However, it should be possible to quantify these results using, e.g., a permutation test on the change in median transcription over random samples of the same size as the number of predicted RITs meeting the upstream transcription selection criterion.
 
@@ -147,14 +145,14 @@ Besides the canonical RITs discussed so far, the motif discovery pipeline uncove
 
 \subsubsection{The Neisserial DNA uptake sequence TAM}
 
-\begin{wrapfigure}[16]{hr}{0.5\textwidth}
+\begin{figure}[htp]
 \begin{center}
-\includegraphics[width=7cm]{clus9}
+\includegraphics[width=16cm]{clus9v2}
 \caption[Neisserial DNA uptake sequence terminator]{\textbf{Neisserial DNA uptake sequence terminator.} On the left, consensus secondary structure and MIS for 2012 non-identical cluster 9 TAMs in the order Neisseriales. On the right, median expression over predicted terminator sequences derived from RNA-seq experiments in \textit{Neisseria gonorrhoeae} \parencite{Isabella2011}.
 } 
 \label{fig:clus9}
 \end{center}
-\end{wrapfigure}
+\end{figure}
 
 This first, and perhaps one of the most distinctive, of these elements is a previously known TAM containing a DNA uptake sequence (DUS\nomenclature[Z]{DUS}{DNA uptake sequence}) in the $\beta$-proteobacterial order Neisseriales. The Neisseriales frequently exchange genetic material, leading to difficulties in studying their population structure and so-called `fuzzy' species \parencite{Corander2012}. This exchange is mediated by specific systems \parencite{Hamilton2006}. Neisserial species are able to excrete DNA for donation through a type 4 secretion system \parencite{Hamilton2005} and/or autolysis. A type 4 pilus-like system is then thought to specifically bind DNA containing a 10-base DUS (GCCGTCTGAA in \textit{Neisseria gonorrhoeae}), which is then incorporated in to the genome through homologous recombination. Recent work has shown that there are a number of distinct `dialects' of DUS which act to reduce the efficiency of uptake between distantly related species within the order \parencite{Frye2013}.
 
