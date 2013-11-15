@@ -36,9 +36,11 @@ Changed PAM to TAM (terminus associated motif)
 pg 99, 107: de-italicized Mycobacteria
 pg 111, 120: Increased figure size, modified color scheme
 pg 114, 123: Increased figure size, modified color scheme
-pg 114, : On further research, it looks like Neisseria species are actually thought to secrete DNA via a T4SS; I've included an additional primary research article to support this assertion: Hamilton, 2005 "Neisseria gonorrhoeae secretes chromosomal DNA via a novel type IV secretion system"
-pg 114, : Actionbacteria -> Actinobacteria
-pg 114, : de-italicized Mycobacteria
+pg 114, 122: On further research, it looks like Neisseria species are actually thought to secrete DNA via a T4SS; I've included an additional primary research article to support this assertion: Hamilton, 2005 "Neisseria gonorrhoeae secretes chromosomal DNA via a novel type IV secretion system"
+pg 114, 124: Actionbacteria -> Actinobacteria
+pg 114, 124: de-italicized Mycobacteria
+pg 115, 124: modified figure color scheme
+pg 116, 126: enlarged figure, modified color scheme
 
 Publications:
 pg 120, : sproulation -> sporulation

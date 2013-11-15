@@ -162,7 +162,7 @@ The presence of the \textit{Neisseria} DUS in terminator-like structures has lon
 
 \begin{figure}[htp]
 \begin{center}
-\includegraphics[width=14cm]{clus7}
+\includegraphics[width=\textwidth]{clus7v2}
 \caption[Actinobacterial TAM]{\textbf{Actinobacterial TAM.} On the left, consensus secondary structure and MIS for 2891 non-identical cluster 7 TAMs in the class Actinobacteria. On the right, median expression over predicted terminator sequences derived from RNA-seq experiments in \textit{Mycobacterium tuberculosis} \parencite{Arnvig2011}.
 } 
 \label{fig:clus7}
@@ -175,14 +175,14 @@ Interestingly, the enrichment analysis also showed overrepresentation of hits in
 
 \subsubsection{Type 1 integron attC sites}
 
-\begin{wrapfigure}[15]{hl}{0.5\textwidth}
+\begin{figure}[htp]
 \begin{center}
-\includegraphics[width=7cm]{clus52}
+\includegraphics[width=\textwidth]{clus52v2}
 \caption[Type 1 integron attC sites]{\textbf{Type 1 integron attC sites.} On the left, consensus secondary structure and MIS for 420 cluster 52 TAMs in the Proteobacteria. On the right, median expression over predicted terminator sequences derived from RNA-seq experiments in \textit{Vibrio cholerae} \parencite{Mandlik2011}.
 } 
 \label{fig:clus52}
 \end{center}
-\end{wrapfigure}
+\end{figure}
 
 Many Gram-negative bacteria harbor arrays of horizontally-acquired gene cassettes known as integrons \parencite{Hall2012}. The architecture of these integrons is roughly similar, consisting of an \textit{intI} gene encoding an integrase, an \textit{attI} integration site, and a series of gene cassettes containing \textit{attC} sites important for recognition by IntI. While the sequence of \textit{attC} sites can vary widely, it has long been known that the \textit{attC} sites of the \textit{Vibrio cholerae} type 1 integron are unusually homogenous. My pipeline discovered this motif (see figure \ref{fig:clus52}), and it is enriched primarily in \textit{Vibrio} and \textit{Shewanella} genomes, though can be found sporadically at low copy number throughout the $\gamma$-proteobacteria. Expression of type 1 integrons is thought to be driven primarily by a single upstream promoter. An early study of this expression suggested that the \textit{attC} sites may be acting as transcriptional terminators based on Northern blots showing that transcripts did not cover the entire integron and tended to contain full-length gene cassettes, and that transcript frequency was inversely correlated with transcript length \parencite{Collis1995}. A single study has attempted verify this hypothesis, and found that \textit{attC} sites do not appear to promote transcriptional termination, and rather propose a mechanism for enhancing cassette expression through the presence of short ORFs within the \textit{attC} sites \parencite{Jacquier2009}. However, this study only tested a single \textit{attC} site with an atypically large hairpin-loop region for termination activity; additionally this study does not explain the patterns seen in the Northern blots of the \textcite{Collis1995} study. A recent study of the termination efficiency of a large number of transcriptional terminators included an \textit{attC} site in their initial screens, though it was discarded early in their study as being a low efficiency terminator \parencite{Cambray2013}. However, their initial experiments on this element, using a fluorescent reporter construct in \textit{Escherichia coli}, did show a termination efficiency of 25\%. Our analysis of RNA-seq data in \textit{Vibrio cholerae} appears to support the hypothesis that at least some \textit{attC} may operate as transcriptional attenuators. This stochastic attenuation at \textit{attC} sites would explain the results of \textcite{Collis1995}, and would lead to a gradual titration of expression along the length of integrons, barring the presence of internal promoters.
 
